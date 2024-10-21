@@ -1,0 +1,140 @@
+body {
+  color: #2a2a2a;
+}
+
+/* Загальні стилі для всіх типів повідомлень */
+.alert {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Специфічні стилі для кожного типу */
+.success {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+
+/* ✅ Застосується тільки до посилань, які лежать всередині тегу з класом social-links */
+.social-links a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* ❌ Не вирішує завдання */
+
+
+
+/* ✅ Те, що потрібно */
+.menu > li {
+  border: 1px solid tomato;
+}
+
+/*.link {
+  color: teal;
+}
+
+.link:hover {
+  color: tomato;
+}*/
+
+.social-links .link {
+  color: teal;
+}
+
+/* Два і більше селекторів розділяються комою */
+.social-links .link:hover,
+.social-links .link:focus {
+  color: orange;
+}
+.social-links .link:active {
+  color: red;
+}
+
+.schedule-body > tr:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* Оформлення таблиці */
+.schedule {
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #212121;
+}
+
+/*.post {
+  color: green;
+}
+.post-link {
+  color: inherit;
+}*/
+
+:root {
+  --brand-color: #3f51b5;
+}
+
+.section {
+  /* Інші стилі */
+  border: 2px solid var(--brand-color);
+}
+
+.section-title {
+  /* Інші стилі */
+  color: var(--brand-color);
+}
+
+
+.section-title::before {
+  /* Інші стилі */
+  background-color: var(--brand-color);
+}
+
+.post {
+color: var(--brand-color)
+}
+
+.text > span {
+  text-decoration: line-through;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff
+}
+
+.site-nav .link {
+  text-transform: uppercase;
+}
+
+.post-title {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.title {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.title-shadow {
+  color: #ffffff;
+  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
+}
