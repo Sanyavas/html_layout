@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 <!-- Шапка сторінки -->
-<header>
+<header class="page-header">
     <a href="/">
         <img src="img/WebStudio.svg" alt="LOGO" width="50">
     </a>
 
     <nav>
         <!-- Навігація на інші сторінки -->
-        <ul>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/about">About</a></li>
+        <ul class="site-nav">
+            <li><a href="" style="color=">Portfolio</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
         </ul>
     </nav>
 
-    <ul>
+    <ul class="auth-nav">
         <li><a href="mailto:vasilinaoleksandr@gmail.com">vasilinaoleksandr@gmail.com</a></li>
         <li><a href="tel:+380671234567">+380671234567</a></li>
     </ul>
@@ -93,27 +94,54 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    <table class="schedule">
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Маршрут</th>
+      <th>Час у дорозі</th>
+    </tr>
+  </thead>
+
+  <tbody class="schedule-body">
+    <tr>
+      <td>433</td>
+      <td>Київ - Ковель</td>
+      <td>5 годин</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td>Харків - Дніпро</td>
+      <td>7 годин</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>Львів - Одеса</td>
+      <td>4 годин</td>
+    </tr>
+  </tbody>
+</table>
+
 </main>
+    <!-- Підвал сторінки -->
+    <footer>
+        <img src="img/WebStudio.svg" alt="">
+        <address>
+            м. Київ, пр-т Лесі Українки, 26
+        </address>
+        <address>
+            <a href="mailto:vasilinaoleksandr@gmail.com">vasilinaoleksandr@gmail.com</a>
+            <a href="tel:+380671234567">+380671234567</a>
+        </address>
 
-<!-- Підвал сторінки -->
-<footer>
-    <img src="img/WebStudio.svg" alt="">
-    <address>
-        м. Київ, пр-т Лесі Українки, 26
-    </address>
-    <address>
-        <a href="mailto:vasilinaoleksandr@gmail.com">vasilinaoleksandr@gmail.com</a>
-        <a href="tel:+380671234567">+380671234567</a>
-    </address>
-
-    <!-- ⚠️ Посилання на соцмережі, не nav -->
-    <ul>
-        <li><a href="" aria-label="Facebook">Facebook</a></li>
-        <li><a href="">Twitter</a></li>
-        <li><a href="">Instagram</a></li>
-    </ul>
-    <img src="https://raw.githubusercontent.com/Sanyavas/html_layout/refs/heads/first/img/box_1.png" alt="">
-    <p>Всі права захищені Sanyavas &copy; 2024</p>
-</footer>
+        <!-- ⚠️ Посилання на соцмережі, не nav -->
+        <ul class="social-links">
+            <li><a class="link" href="" aria-label="Facebook">Facebook</a></li>
+            <li><a class="link" href="">Twitter</a></li>
+            <li><a class="link" href="">Instagram</a></li>
+        </ul>
+        <img src="https://raw.githubusercontent.com/Sanyavas/html_layout/refs/heads/first/img/box_1.png" alt="">
+        <p>Всі права захищені Sanyavas &copy; 2024</p>
+    </footer>
 </body>
 </html>
