@@ -31,20 +31,83 @@
   font-weight: 400;
   line-height: 1.7;
 }
+
+.soft-skills {
+    display: flex;
+    justify-content: center; /* Додає простір між елементами */
+    flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .soft-skills .box {
+    max-width: 270px;
+    padding: 30px;
+    margin-bottom: 20px; /* Відступ між блоками по вертикалі */
+    /* text-align: center; */
+  }
+
 /* Experience */
 
-.section .title {
-    color: var(--title-text-color);
-    font-size: 36px;
-    font-weight: 700;
-  }
-  
+.section-exp .title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.work-list {
+  display: flex;
+  justify-content: center; /* Додає простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-list .box {
+  padding: 30px;
+  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
+  text-align: center;
+}
+
 /* Team */
 
-.section .title-name {
+.section-team {
+  background-color: var(--light-bg-color);
+}
+
+.section-team .title {
   color: var(--title-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-team .title-name {
+  color: var(--title-text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team-list .text {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .team-list {
-  background-color: var(--light-bg-color);
+  display: flex;
+  justify-content: center; /* Додає простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-list .box {
+  /* width: 370px; */
+  padding: 30px;
+  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
+  text-align: center;
 }
