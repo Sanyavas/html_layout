@@ -1,0 +1,24 @@
+/*колір основного тексту background: #757575;
+колір заголовку background: #212121;
+синій колір background: #2196F3;
+основний сірий фон background: #2F303A;
+*/
+
+/* Main section */
+
+.main-section {
+    background-color: var(--background-color);
+}
+
+/* Soft skills */
+
+.section .title {
+    color: var(--title-text-color);
+}
+
+/* Team */
+
+.section .title-name {
+    color: var(--title-text-color);
+}
+

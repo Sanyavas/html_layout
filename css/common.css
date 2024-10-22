@@ -1,0 +1,70 @@
+/*колір основного тексту background: #757575;
+колір заголовку background: #212121;
+синій колір background: #2196F3;
+основний сірий фон background: #2F303A;
+*/
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --primary-white-color: #ffffff;
+    --background-color: #2F303A;
+}
+
+
+body {
+    background-color: var(--primary-white-color);
+    color: var(--primary-text-color);
+}
+
+.list {
+    list-style: none;
+}
+
+/* Logo */
+
+.logo {
+    color: var(--accent-color);
+}
+
+.logo-header {
+    color: #000000;
+}
+
+.logo-footer {
+    color: var(--primary-white-color);
+}
+
+/* Site nav */
+
+.site-nav .link:hover, .site-nav .link:focus {
+    color: var(--accent-color);
+}
+
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--background-color);
+}
+
+/* Button */
+
+.button {
+    color: var(--primary-text-color);
+    background-color: var(--primary-white-color);
+}
+
+.button.primary {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
+.button.secondary {
+    color: var(--accent-color);
+    background-color: var(--primary-white-color);
+}

@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 <!-- Шапка сторінки -->
 <header class="page-header">
-    <a href="/">
-        <img src="img/WebStudio.svg" alt="LOGO" width="50">
+    <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span>
+        <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
     </a>
 
     <nav>
         <!-- Навігація на інші сторінки -->
-        <ul class="site-nav">
-            <li><a href="" style="color=">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">About</a></li>
+        <ul class="site-nav list">
+            <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+            <li><a href="" class="link">Contact</a></li>
+            <li><a href="" class="link">About</a></li>
         </ul>
     </nav>
 
-    <ul class="auth-nav">
+    <ul class="auth-nav list">
         <li><a href="mailto:vasilinaoleksandr@gmail.com">vasilinaoleksandr@gmail.com</a></li>
         <li><a href="tel:+380671234567">+380671234567</a></li>
     </ul>
@@ -30,37 +31,37 @@
 <!-- Унікальний контент сторінки -->
 <main>
     <!--  Main section  -->
-    <section>
-        <h1>Ефективні рішення для вашого бізнесу</h1>
-        <a href="">Замовити послугу</a>
+    <section class="main-section">
+        <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
+        <a href="" class="button primary">Замовити послугу</a>
     </section>
 
     <!--  Soft skills  -->
-    <section>
-        <ul>
+    <section class="section">
+        <ul class="soft-skill list">
             <li>
-                <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+                <h3 class="title">УВАГА ДО ДЕТАЛЕЙ</h3>
                 <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
             </li>
             <li>
-                <h3>ПУНКТУАЛЬНІСТЬ</h3>
+                <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
                 <p>Завдання організації, особливо рамки й місце навчання кадрів тягне у себе.</p>
             </li>
             <li>
-                <h3>ПЛАНУВАННЯ</h3>
+                <h3 class="title">ПЛАНУВАННЯ</h3>
                 <p>Так само консультація з широким активом значною мірою зумовлює.</p>
             </li>
             <li>
-                <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
                 <p>Вагомість цих проблем настільки очевидна, що реалізація планових завдань.</p>
             </li>
         </ul>
     </section>
 
     <!--  Experience  -->
-    <section>
-        <h2>Чим ми займаємося</h2>
-        <ul>
+    <section class="section">
+        <h2 class="title">Чим ми займаємося</h2>
+        <ul class="work-list list">
             <li><a href=""><img src="img/box_1.png" alt="" width="180"></a></li>
             <li><a href=""><img src="img/box_2.png" alt="" width="180"></a></li>
             <li><a href=""><img src="img/box_3.png" alt="" width="180"></a></li>
@@ -68,64 +69,34 @@
     </section>
 
     <!--  Team  -->
-    <section>
-        <h2>Наша команда</h2>
-        <ul>
+    <section class="section">
+        <h2 class="title">Наша команда</h2>
+        <ul class="team-list list">
             <li>
                 <img src="img/vasylyna_oleksandr_photo.jpg" alt="" width="120">
-                <h3>Oleksandr Vasylyna</h3>
+                <h3 class="title-name">Oleksandr Vasylyna</h3>
                 <p>Developer</p>
             </li>
             <li>
                 <img src="img/Mark_Zuckerberg.jpg" alt="" width="120">
-                <h3>Mark Zuckerberg</h3>
+                <h3 class="title-name">Mark Zuckerberg</h3>
                 <p>Developer</p>
             </li>
             <li>
                 <img src="img/Elon_Musk.jpg" alt="" width="120">
-                <h3>Elon Musk</h3>
+                <h3 class="title-name">Elon Musk</h3>
                 <p>Developer</p>
             </li>
 
         </ul>
     </section>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mucmWHWbZ2o?si=Jy_k17aXb1Z46bF2"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <table class="schedule">
-  <thead>
-    <tr>
-      <th>Номер</th>
-      <th>Маршрут</th>
-      <th>Час у дорозі</th>
-    </tr>
-  </thead>
-
-  <tbody class="schedule-body">
-    <tr>
-      <td>433</td>
-      <td>Київ - Ковель</td>
-      <td>5 годин</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>Харків - Дніпро</td>
-      <td>7 годин</td>
-    </tr>
-    <tr>
-      <td>258</td>
-      <td>Львів - Одеса</td>
-      <td>4 годин</td>
-    </tr>
-  </tbody>
-</table>
 
 </main>
     <!-- Підвал сторінки -->
-    <footer>
-        <img src="img/WebStudio.svg" alt="">
+    <footer class="footer">
+        <a class="logo" clhref="./index.html">Web<span class="logo-footer">Studio</span>
+            <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
+        </a>
         <address>
             м. Київ, пр-т Лесі Українки, 26
         </address>
@@ -135,12 +106,11 @@
         </address>
 
         <!-- ⚠️ Посилання на соцмережі, не nav -->
-        <ul class="social-links">
+        <ul class="social-links list">
             <li><a class="link" href="" aria-label="Facebook">Facebook</a></li>
             <li><a class="link" href="">Twitter</a></li>
             <li><a class="link" href="">Instagram</a></li>
         </ul>
-        <img src="https://raw.githubusercontent.com/Sanyavas/html_layout/refs/heads/first/img/box_1.png" alt="">
         <p>Всі права захищені Sanyavas &copy; 2024</p>
     </footer>
 </body>
