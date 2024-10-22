@@ -7,18 +7,44 @@
 /* Main section */
 
 .main-section {
-    background-color: var(--background-color);
+  color: var(--primary-white-color);
+  background-color: var(--dark-bg-color);
+  text-align: center;
+}
+
+.main-section .main-title {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.4;
 }
 
 /* Soft skills */
 
-.section .title {
-    color: var(--title-text-color);
+.title-skills {
+  color: var(--title-text-color);
+  font-size: 14px;
+  font-weight: 700;
 }
 
+.soft-skills p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+/* Experience */
+
+.section .title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
 /* Team */
 
 .section .title-name {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
+.team-list {
+  background-color: var(--light-bg-color);
+}
