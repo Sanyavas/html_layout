@@ -13,6 +13,8 @@
 }
 
 .main-section .main-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.4;
@@ -34,7 +36,7 @@
 
 .soft-skills {
     display: flex;
-    justify-content: center; /* Додає простір між елементами */
+    justify-content: space-around; /* Додає простір між елементами */
     flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
     list-style: none;
     padding: 0;
@@ -43,9 +45,13 @@
 
   .soft-skills .box {
     max-width: 270px;
-    padding: 30px;
+    padding: 15px;
+    /* margin-left: 15px;
+    margin-right: 15px; */
     margin-bottom: 20px; /* Відступ між блоками по вертикалі */
     /* text-align: center; */
+    /* background-color: tomato; */
+    outline: 3px;
   }
 
 /* Experience */
@@ -59,7 +65,7 @@
 
 .work-list {
   display: flex;
-  justify-content: center; /* Додає простір між елементами */
+  justify-content: space-around; /* Додає простір між елементами */
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
   list-style: none;
   padding: 0;
@@ -67,7 +73,7 @@
 }
 
 .work-list .box {
-  padding: 30px;
+ 
   margin-bottom: 20px; /* Відступ між блоками по вертикалі */
   text-align: center;
 }
@@ -98,7 +104,7 @@
 
 .team-list {
   display: flex;
-  justify-content: center; /* Додає простір між елементами */
+  justify-content: space-around; /* Додає простір між елементами */
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
   list-style: none;
   padding: 0;

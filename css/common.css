@@ -1,8 +1,7 @@
-/*колір основного тексту background: #757575;
-колір заголовку background: #212121;
-синій колір background: #2196F3;
-основний сірий фон background: #2F303A;
-*/
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 :root {
   --primary-text-color: #757575;
@@ -22,6 +21,8 @@ body {
 
 .list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
@@ -49,13 +50,20 @@ a {
 /* Button */
 
 .button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 11px 34px;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
+  text-align: center;
+
 }
 
 .button.primary {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  border-color: var(--primary-white-color);
 }
 
 .button.secondary {
@@ -63,7 +71,23 @@ a {
   background-color: var(--primary-white-color);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  /* outline: 2px solid tomato; */
+}
+
 /* Site nav */
+
+/* .site-nav a {
+  display: inline;
+  vertical-align: middle;
+} */
+
+
 
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -78,7 +102,7 @@ a {
 .cont-nav a:focus {
   color: var(--accent-color);
 }
-/* Footer */
+/* Footer */ 
 
 .footer {
   color: var(--primary-white-color);
@@ -88,6 +112,8 @@ a {
 .address {
   list-style: none;
   line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .address a {
