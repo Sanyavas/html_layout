@@ -1,0 +1,74 @@
+
+:root {
+  --card-set-gap: 30px;
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-set-btn {
+  display: flex;
+  /* outline: 1px solid tomato; */
+  list-style: none;
+  justify-content: center;
+  /* margin: 0 15px; */
+  /* align-items: center; */
+}
+
+.card-btn {
+  min-width: 110px;
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.card-btn:hover, .card-btn:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
+.card {
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-set {
+  /* outline: 1px solid tomato; */
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--card-set-gap);
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -var(--card-set-gap);
+  margin-left: -var(--card-set-gap);
+}
+
+.card-set > .item {
+  /* outline: 1px solid seagreen; */
+
+  flex-basis: calc(100% / 3 - 40px);
+
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  margin-top: 20px;
+}
+
+.card-object {
+  margin-top: 20px;
+}
+
+.card-desc {
+  margin-top: 20px;
+}
