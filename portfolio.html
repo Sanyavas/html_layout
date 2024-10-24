@@ -3,8 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
   <body>
     <!-- Шапка сторінки -->
@@ -38,88 +51,134 @@
       Portfolio
 
       <section>
-        <ul>
-          <li><button type="button">Всі</button></li>
-          <li><button type="button">Веб-сайти</button></li>
-          <li><button type="button">Додатки</button></li>
-          <li><button type="button">Дизайн</button></li>
-          <li><button type="button">Маркетинг</button></li>
-        </ul>
+        <div class="container">
+          <ul class="card-set-btn">
+            <li><button class="card-btn" type="button">Всі</button></li>
+            <li><button class="card-btn" type="button">Веб-сайти</button></li>
+            <li><button class="card-btn" type="button">Додатки</button></li>
+            <li><button class="card-btn" type="button">Дизайн</button></li>
+            <li><button class="card-btn" type="button">Маркетинг</button></li>
+          </ul>
+          <ul class="card-set">
 
-        <ul class="project-list">
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-          <li>
-            <a href=""
-              ><img src=".\img\img-project.jpg" alt="" width="120" />
-              <h2 class="title">Oleksandr Vasylyna</h2>
-              <p>Developer</p>
-              <p>paragraph</p>
-            </a>
-          </li>
-        </ul>
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="item">
+              <article class="card">
+                <div class="card-thumb">
+                  <img src=".\img\img-project.jpg" alt="" />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oleksandr Vasylyna</h2>
+                  <p class="card-object">Developer</p>
+                  <p class="card-desc">paragraph</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <!-- Підвал сторінки -->
