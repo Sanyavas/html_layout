@@ -1,0 +1,118 @@
+/*колір основного тексту background: #757575;
+колір заголовку background: #212121;
+синій колір background: #2196F3;
+основний сірий фон background: #2F303A;
+*/
+
+/* Main section */
+
+.main-section {
+  color: var(--primary-white-color);
+  background-color: var(--dark-bg-color);
+  text-align: center;
+}
+
+.main-section .main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+/* Soft skills */
+
+.title-skills {
+  color: var(--title-text-color);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.soft-skills p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.soft-skills {
+    display: flex;
+    justify-content: space-between; /* Додає простір між елементами */
+    flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .soft-skills .box {
+    max-width: 270px;
+    padding: 15px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+    /* background-color: tomato; */
+    outline: 3px;
+  }
+
+/* Experience */
+
+.section-exp .title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.work-list {
+  display: flex;
+  justify-content: space-between; /* Додає простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-list .box {
+ 
+  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
+  text-align: center;
+}
+
+/* Team */
+
+.section-team {
+  background-color: var(--light-bg-color);
+}
+
+.section-team .title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-team .title-name {
+  color: var(--title-text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team-list .text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between; /* Додає простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-list .box {
+  /* width: 370px; */
+  padding: 30px;
+  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
+  text-align: center;
+}
+

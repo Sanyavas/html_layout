@@ -19,7 +19,7 @@
   color: var(--primary-text-color);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   margin: 0 15px;
 }
 
@@ -50,7 +50,7 @@
 
 .card-set > .item {
   /* outline: 1px solid seagreen; */
-
+/* width: calc((100% - 60px) / 3); */
   flex-basis: calc(100% / 3 - 40px);
 
   margin-left: var(--card-set-gap);
