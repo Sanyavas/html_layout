@@ -22,28 +22,32 @@
   <body>
     <!-- Шапка сторінки -->
     <header class="page-header">
-      <a class="logo" href="./index.html"
-        >Web<span class="logo-header">Studio</span>
-        <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
-      </a>
+      <div class="container main-nav">
+        <a class="logo" href="./index.html"
+          >Web<span class="logo-black">Studio</span>
+          <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
+        </a>
 
-      <nav>
-        <!-- Навігація на інші сторінки -->
-        <ul class="site-nav list">
-          <li><a href="./portfolio.html" class="link current">Portfolio</a></li>
-          <li><a href="" class="link">Contact</a></li>
-          <li><a href="" class="link">About</a></li>
+        <nav>
+          <!-- Навігація на інші сторінки -->
+          <ul class="site-nav list">
+            <li class="item">
+              <a href="./portfolio.html" class="link">Portfolio</a>
+            </li>
+            <li class="item"><a href="" class="link">Contact</a></li>
+            <li class="item"><a href="" class="link">About</a></li>
+          </ul>
+        </nav>
+
+        <ul class="cont-nav list">
+          <li class="item">
+            <a href="mailto:vasilinaoleksandr@gmail.com"
+              >vasilinaoleksandr@gmail.com</a
+            >
+          </li>
+          <li class="item"><a href="tel:+380671234567">+380671234567</a></li>
         </ul>
-      </nav>
-
-      <ul class="cont-nav list">
-        <li>
-          <a href="mailto:vasilinaoleksandr@gmail.com"
-            >vasilinaoleksandr@gmail.com</a
-          >
-        </li>
-        <li><a href="tel:+380671234567">+380671234567</a></li>
-      </ul>
+      </div>
     </header>
 
     <!-- Унікальний контент сторінки -->
@@ -184,33 +188,52 @@
       </section>
     </main>
     <!-- Підвал сторінки -->
-    <footer class="footer">
-      <a class="logo" href="./index.html"
-        >Web<span class="logo-footer">Studio</span>
-        <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
-      </a>
-      <ul class="address">
-        <li>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=м.+Київ,+пр-т+Лесі+Українки,+26"
-            target="_blank"
-            >м. Київ, пр-т Лесі Українки, 26</a
-          >
-        </li>
-        <li>
-          <a href="mailto:vasilinaoleksandr@gmail.com"
-            >vasilinaoleksandr@gmail.com</a
-          >
-        </li>
-        <li><a href="tel:+380671234567">+380671234567</a></li>
-      </ul>
+   <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo">
+          <a class="logo" href="./index.html"
+            >Web<span class="logo-white">Studio</span>
+            <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
+          </a>
+          <ul class="footer-address">
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=м.+Київ,+пр-т+Лесі+Українки,+26"
+                target="_blank"
+                >м. Київ, пр-т Лесі Українки, 26</a
+              >
+            </li>
+            <li>
+              <a href="mailto:vasilinaoleksandr@gmail.com"
+                >vasilinaoleksandr@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+380671234567">+380671234567</a></li>
+          </ul>
+        </div>
 
-      <!-- ⚠️ Посилання на соцмережі, не nav -->
-      <ul class="social-links list">
-        <li><a class="link" href="" aria-label="Facebook">Facebook</a></li>
-        <li><a class="link" href="">Twitter</a></li>
-        <li><a class="link" href="">Instagram</a></li>
-      </ul>
+        <!-- ⚠️ Посилання на соцмережі, не nav -->
+        <div class="social">
+          <h2 class="social-title">Приєднуйся</h2>
+          <ul class="social-list list">
+            <li class="social-item">
+              <a class="social-link" href="#" aria-label="Facebook">
+                <img src=".\img\soc_in.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#">
+                <img src=".\img\soc_in.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#">
+                <img src=".\img\soc_in.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <p class="end">Всі права захищені Sanyavas &copy; 2024</p>
     </footer>
   </body>

@@ -7,11 +7,8 @@
 
 .card-set-btn {
   display: flex;
-  /* outline: 1px solid tomato; */
   list-style: none;
   justify-content: center;
-  /* margin: 0 15px; */
-  /* align-items: center; */
 }
 
 .card-btn {
@@ -49,7 +46,6 @@
 }
 
 .card-set > .item {
-  /* outline: 1px solid seagreen; */
 /* width: calc((100% - 60px) / 3); */
   flex-basis: calc(100% / 3 - 40px);
 
