@@ -4,15 +4,29 @@
 основний сірий фон background: #2F303A;
 */
 
-/* Main section */
+/* Hero section */
 
-.main-section {
+.hero-section {
+  height: 600px;
   color: var(--primary-white-color);
-  background-color: var(--dark-bg-color);
-  text-align: center;
+  /* background-color: var(--dark-bg-color); */
+  background-image: linear-gradient(
+      to right,
+      rgba(70, 64, 36, 0.4),
+      rgba(101, 133, 29, 0.4)
+    ),
+    url(../img/hero_img.jpg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  display: flex; /*  перетворює .hero-section на flex-контейнер. */
+  flex-direction: column; /* розташовує елементи по вертикалі. */
+  justify-content: center; /* вирівнює елементи по вертикалі (висоті). */
+  align-items: center; /* вирівнює елементи по горизонталі (ширині). */
+  text-align: center; /* центрує текст. */
 }
 
-.main-title {
+.hero-title {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 44px;
@@ -21,6 +35,10 @@
 }
 
 /* Soft skills */
+
+.skills {
+  padding-top: 94px;
+}
 
 .skills-list {
   display: flex;
@@ -46,6 +64,14 @@
   padding-right: 0;
 }
 
+.skill-item::before {
+  width: 120px;
+  height: 270px;
+  content: "xzc";
+  
+  background-color: rgb(97, 160, 160);
+}
+
 .skill-title {
   color: var(--title-text-color);
   font-size: 14px;
@@ -57,7 +83,6 @@
   font-weight: 400;
   line-height: 1.7;
 }
-
 
 /* Experience */
 
@@ -125,5 +150,3 @@
   font-weight: 400;
   margin-top: 10px;
 }
-
-

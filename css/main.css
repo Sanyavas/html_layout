@@ -62,7 +62,8 @@ img {
 
 .button {
   display: inline-block;
-  /* border: 1px solid transparent; */
+  border: 1px solid tomato;
+  border: 3px teal;
   border-radius: 4px;
   padding: 11px 34px;
   color: var(--primary-text-color);
