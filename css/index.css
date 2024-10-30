@@ -53,30 +53,14 @@
   max-width: 270px;
 }
 
-.skill-item::before {
-  content: "";
-  display: inline-block;
+.skill-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.skill-item.icon-antenna::before {
-  background-image: url(../img/antenna.png);
-}
-
-.skill-item.icon-clock::before {
-  background-image: url(../img/clock.png);
-}
-
-.skill-item.icon-diagram::before {
-  background-image: url(../img/diagram.png);
-}
-
-.skill-item.icon-astronaut::before {
-  background-image: url(../img/astronaut.png);
+  margin-bottom: 10px; /* Відступ між фоном та текстом */
 }
 
 .skill-title {
@@ -155,7 +139,7 @@
 
 .team-img {
   width: 270px; /* Відповідає ширині зображення */
-  height: 320px; /* Задайте бажану висоту */
+  height: 320px; /* Бажана висота */
   overflow: hidden; /* Приховує частини, які виходять за межі */
   position: relative; /* Необхідно для абсолютного позиціювання дочірніх елементів */
 }
@@ -173,15 +157,98 @@
   margin-top: 10px;
 }
 
-.team-description::after {
-  content: "";
-  display: inline-block;
-  width: 208px;
+.team-social-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
   height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.team-social-background:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-background a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.team-social {
+  display: flex;
+  padding: 0;
+  margin: 0;
   margin-top: 16px;
   margin-bottom: 30px;
-  /* background-color: #f5f4fa; */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../img/Social_links.png);
+  justify-content: center;
+}
+
+.team-social .icon {
+  fill: #b8afb6;
+  width: 20px;
+  height: 20px;
+}
+
+.team-social-background:hover .icon,
+.team-social-background:focus .icon {
+  fill: #fff; /* Changes the icon color */
+}
+
+.team-social-background:hover,
+.team-social-background:focus {
+background-color: var(--accent-color);
+}
+
+/* Clients */
+
+.clients {
+  /* display: block; */
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.client-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.client-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client-item {
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center; /* Додає простір між елементами */
+  list-style: none;
+}
+
+.client-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  /* border-radius: 50%; */
+  background-color: #fff;
+}
+
+.client-icon {
+  width: 75px;
+  height: 75px;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 50px;
 }
