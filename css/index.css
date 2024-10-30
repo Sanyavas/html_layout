@@ -51,40 +51,55 @@
 
 .skill-item {
   max-width: 270px;
-  padding: 15px;
-  margin-bottom: 20px;
-  /* outline: 1px solid tomato; */
-}
-
-.skill-item:first-child {
-  padding-left: 0;
-}
-
-.skill-item:last-child {
-  padding-right: 0;
 }
 
 .skill-item::before {
-  width: 120px;
-  height: 270px;
-  content: "xzc";
-  
-  background-color: rgb(97, 160, 160);
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.skill-item.icon-antenna::before {
+  background-image: url(../img/antenna.png);
+}
+
+.skill-item.icon-clock::before {
+  background-image: url(../img/clock.png);
+}
+
+.skill-item.icon-diagram::before {
+  background-image: url(../img/diagram.png);
+}
+
+.skill-item.icon-astronaut::before {
+  background-image: url(../img/astronaut.png);
 }
 
 .skill-title {
   color: var(--title-text-color);
   font-size: 14px;
   font-weight: 700;
+  margin-top: 30px;
 }
 
 .skill-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
+  margin-top: 10px;
 }
 
 /* Experience */
+
+.experience {
+  display: block;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .experience-title {
   color: var(--title-text-color);
@@ -94,23 +109,21 @@
 }
 
 .experience-list {
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
   display: flex;
   justify-content: space-between; /* Додає простір між елементами */
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.experience-item {
-  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
-  text-align: center;
 }
 
 /* Team */
 
 .team {
   background-color: var(--light-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-title {
@@ -119,23 +132,32 @@
   font-size: 36px;
   font-weight: 700;
   text-align: center;
-  padding-top: 94px;
+  
 }
 
 .team-list {
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
   display: flex;
   justify-content: space-between; /* Додає простір між елементами */
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
   list-style: none;
-  padding: 0;
-  margin: 0;
+  
 }
 
 .team-item {
-  /* width: 370px; */
-  padding: 30px 0;
-  margin-bottom: 20px; /* Відступ між блоками по вертикалі */
   text-align: center;
+  max-width: 270px;
+  background-color: #fff;
+  box-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.team-img {
+  width: 270px; /* Відповідає ширині зображення */
+  height: 320px; /* Задайте бажану висоту */
+  overflow: hidden; /* Приховує частини, які виходять за межі */
+  position: relative; /* Необхідно для абсолютного позиціювання дочірніх елементів */
 }
 
 .team-name {
@@ -149,4 +171,17 @@
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
+}
+
+.team-description::after {
+  content: "";
+  display: inline-block;
+  width: 208px;
+  height: 44px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  /* background-color: #f5f4fa; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/Social_links.png);
 }

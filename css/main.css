@@ -44,6 +44,7 @@ img {
 /* Logo */
 
 .logo {
+  display: flex;
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -62,8 +63,7 @@ img {
 
 .button {
   display: inline-block;
-  border: 1px solid tomato;
-  border: 3px teal;
+  /* border: 1px solid transparent; */
   border-radius: 4px;
   padding: 11px 34px;
   color: var(--primary-text-color);
@@ -118,6 +118,8 @@ img {
   padding-bottom: 32px;
 }
 
+
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -127,12 +129,39 @@ img {
   color: var(--accent-color);
 }
 
+
 /* Contact nav */
 
 .contact-nav {
   display: flex;
   padding: 0;
   margin-left: auto;
+  align-items: center;
+
+}
+
+.item.icon-phone::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background-image: url(../img/smartphone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px; /* Відступ між іконкою та текстом */
+}
+
+.item.icon-email::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background-image: url(../img/envelope.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px; /* Відступ між іконкою та текстом */
 }
 
 .contact-nav .item:not(:last-child) {
@@ -143,6 +172,9 @@ img {
 .contact-nav a:focus {
   color: var(--accent-color);
 }
+
+
+
 /* Footer */
 
 .footer {
