@@ -252,16 +252,16 @@
   background-color: #fff;
 }
 
-.client-background:hover,
-.client-background:focus {
-   border: 1px solid var(--primary-text-color);
-   background-color: rgba(45, 54, 54, 0.1);
-   cursor: pointer;
-}
+
 
 .client-icon {
   width: 75px;
   height: 75px;
+}
+
+.client-icon:hover {
+  transform: scale(1.4);
+  cursor: pointer;
 }
 
 .client-item:not(:last-child) {

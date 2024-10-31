@@ -51,6 +51,11 @@ img {
   font-weight: 700;
 }
 
+.logo:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
 .logo-black {
   color: #000000;
 }
