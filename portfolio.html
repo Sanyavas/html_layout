@@ -25,27 +25,36 @@
       <div class="container main-nav">
         <a class="logo" href="./index.html"
           >Web<span class="logo-black">Studio</span>
-          <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
         </a>
 
         <nav>
           <!-- Навігація на інші сторінки -->
           <ul class="site-nav list">
             <li class="item">
-              <a href="./portfolio.html" class="link">Portfolio</a>
+              <a href="#" class="link">Portfolio</a>
             </li>
             <li class="item"><a href="" class="link">Contact</a></li>
             <li class="item"><a href="" class="link">About</a></li>
           </ul>
         </nav>
 
-        <ul class="cont-nav list">
-          <li class="item">
-            <a href="mailto:vasilinaoleksandr@gmail.com"
-              >vasilinaoleksandr@gmail.com</a
-            >
+        <ul class="contact-nav list">
+          <li class="item nav-icon">
+            <a  class="text-grey-contact" href="mailto:vasilinaoleksandr@gmail.com">
+              <svg class="icon" width="20" height="16">
+                <use href="./img/sprite.svg#icon-email-transparent"></use>
+              </svg>
+              vasilinaoleksandr@gmail.com
+            </a>
           </li>
-          <li class="item"><a href="tel:+380671234567">+380671234567</a></li>
+          <li class="item nav-icon">
+            <a class="text-grey-contact" href="tel:+380671234567">
+              <svg class="icon" width="20" height="16">
+                <use href="./img/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +380671234567
+            </a>
+          </li>
         </ul>
       </div>
     </header>
@@ -188,53 +197,51 @@
       </section>
     </main>
     <!-- Підвал сторінки -->
-   <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-logo">
           <a class="logo" href="./index.html"
             >Web<span class="logo-white">Studio</span>
-            <!-- <img src="img/WebStudio.svg" alt="LOGO" width="50"> -->
           </a>
-          <ul class="footer-address">
+          <ul class="footer-contact list">
             <li>
-              <a
+              <a class="footer-address"
                 href="https://www.google.com/maps/search/?api=1&query=м.+Київ,+пр-т+Лесі+Українки,+26"
                 target="_blank"
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
             <li>
-              <a href="mailto:vasilinaoleksandr@gmail.com"
+              <a class="text-grey-contact" href="mailto:vasilinaoleksandr@gmail.com"
                 >vasilinaoleksandr@gmail.com</a
               >
             </li>
-            <li><a href="tel:+380671234567">+380671234567</a></li>
+            <li><a class="text-grey-contact" href="tel:+380671234567">+380671234567</a></li>
           </ul>
         </div>
 
         <!-- ⚠️ Посилання на соцмережі, не nav -->
-        <div class="social">
-          <h2 class="social-title">Приєднуйся</h2>
-          <ul class="social-list list">
-            <li class="social-item">
-              <a class="social-link" href="#" aria-label="Facebook">
-                <img src=".\img\soc_in.svg" alt="" />
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-link" href="#">
-                <img src=".\img\soc_in.svg" alt="" />
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-link" href="#">
-                <img src=".\img\soc_in.svg" alt="" />
-              </a>
-            </li>
-          </ul>
+        <div class="footer-social">
+          <h2 class="footer-social-title">Приєднуйся
+            <ul class="footer-social-list list">
+              <li class="footer-social-background"><a href=""><svg class="icon">
+                <use href="./img/sprite.svg#icon-instagram"></use>
+              </svg></a></li>
+              <li class="footer-social-background"><a href=""><svg class="icon">
+                <use href="./img/sprite.svg#icon-Twiter"></use>
+              </svg></a></li>
+              <li class="footer-social-background"><a href=""><svg class="icon">
+                <use href="./img/sprite.svg#icon-facebook"></use>
+              </svg></a></li>
+              <li class="footer-social-background"><a href=""><svg class="icon">
+                <use href="./img/sprite.svg#icon-linkedin"></use>
+              </svg></a></li>
+            </ul>
+          </h2>
+          
         </div>
       </div>
-      <p class="end">Всі права захищені Sanyavas &copy; 2024</p>
+      <p class="footer-end">Всі права захищені Sanyavas &copy; 2024</p>
     </footer>
   </body>
 </html>
