@@ -84,6 +84,7 @@ img {
 }
 
 .container {
+  /* outline: 1px solid tomato; */
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -209,7 +210,7 @@ img {
 /* social links */
 
 .footer-social {
-  display: flex;
+  display: inline-block;
   padding: 0;
   margin: 0;
   margin-right: 94px;
@@ -241,6 +242,7 @@ img {
 
 .footer-social-background:not(:last-child) {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .footer-social-background a {
