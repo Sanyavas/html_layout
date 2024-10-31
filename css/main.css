@@ -118,8 +118,6 @@ img {
   padding-bottom: 32px;
 }
 
-
-
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -128,7 +126,6 @@ img {
 .site-nav .link.current {
   color: var(--accent-color);
 }
-
 
 /* Contact nav */
 
@@ -144,7 +141,8 @@ img {
   align-items: center;
 }
 
-.contact-nav .item a { /* Вирівнює іконки по вертикалі */
+.contact-nav .item a {
+  /* Вирівнює іконки по вертикалі */
   display: flex;
   align-items: center;
   color: inherit;
@@ -160,7 +158,6 @@ img {
   fill: #757575; /* Основний колір іконки */
 }
 
-
 .contact-nav a:hover .icon,
 .contact-nav a:focus .icon {
   fill: var(--accent-color); /* Колір іконки при ховері */
@@ -170,8 +167,6 @@ img {
 .contact-nav a:focus {
   color: var(--accent-color); /* Колір тексту при ховері */
 }
-
-
 
 /* Footer */
 
@@ -241,7 +236,7 @@ img {
   height: 44px;
   margin-top: 20px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-social-background:not(:last-child) {
@@ -257,8 +252,6 @@ img {
   text-decoration: none;
 }
 
-
-
 .footer-social .icon {
   fill: #fff;
   width: 20px;
@@ -267,13 +260,13 @@ img {
 
 .footer-social-background:hover,
 .footer-social-background:focus {
-background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .footer-end {
   font-size: 10px;
   font-weight: 400;
   text-align: center;
-margin-top: 60px;
+  margin-top: 60px;
   padding-bottom: 6px;
 }
