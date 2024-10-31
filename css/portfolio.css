@@ -1,14 +1,18 @@
-
 :root {
   --card-set-gap: 30px;
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --btn-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
+
+/* Кнопки */
 
 .card-set-btn {
   display: flex;
   list-style: none;
   justify-content: center;
+  margin-top: 94px;
 }
 
 .card-btn {
@@ -19,14 +23,15 @@
   color: var(--title-text-color);
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin: 0 15px;
 }
 
-.card-btn:hover, .card-btn:focus {
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+.card-btn:hover,
+.card-btn:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--btn-shadow);
 }
 
 .card {
@@ -36,25 +41,24 @@
 }
 
 .card-set {
-  /* outline: 1px solid tomato; */
   padding: 0;
   margin: 0;
   margin-bottom: var(--card-set-gap);
-  list-style: none;
-
   display: flex;
   flex-wrap: wrap;
-
-  margin-top: -var(--card-set-gap);
-  margin-left: -var(--card-set-gap);
+  margin-top: 20px;
 }
 
-.card-set > .item {
-/* width: calc((100% - 60px) / 3); */
-  flex-basis: calc(100% / 3 - 40px);
-
-  margin-left: var(--card-set-gap);
+.card-item {
+  /* outline: 1px solid tomato; */
+  flex-basis: calc(100% / 3 - 20px);
+  margin-right: var(--card-set-gap);
   margin-top: var(--card-set-gap);
+}
+
+/* Set margin-right to 0 for every third item */
+.card-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .card-content {
