@@ -35,25 +35,30 @@
 }
 
 .card {
-  box-shadow: var(--card-shadow);
+  border: 1px solid #eee;
   border-radius: 4px;
   overflow: hidden;
 }
 
-.card-set {
+.card-list {
   padding: 0;
   margin: 0;
   margin-bottom: var(--card-set-gap);
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 94px;
 }
 
 .card-item {
   /* outline: 1px solid tomato; */
-  flex-basis: calc(100% / 3 - 20px);
+  flex-basis: calc(100% / 3 - 21px);
   margin-right: var(--card-set-gap);
   margin-top: var(--card-set-gap);
+}
+
+.card-item:hover {
+  box-shadow: var(--card-shadow);
 }
 
 /* Кожен третій margin-right: 0 */
