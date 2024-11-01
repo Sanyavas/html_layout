@@ -34,12 +34,6 @@
   box-shadow: var(--btn-shadow);
 }
 
-.card {
-  border: 1px solid #eee;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
 .card-list {
   padding: 0;
   margin: 0;
@@ -64,6 +58,12 @@
 /* Кожен третій margin-right: 0 */
 .card-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .card-content {
