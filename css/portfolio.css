@@ -34,7 +34,7 @@
   box-shadow: var(--btn-shadow);
 }
 
-.card-list {
+.product-list {
   padding: 0;
   margin: 0;
   margin-bottom: var(--card-set-gap);
@@ -44,40 +44,91 @@
   margin-bottom: 94px;
 }
 
-.card-item {
+.product-item {
   /* outline: 1px solid tomato; */
   flex-basis: calc(100% / 3 - 21px);
   margin-right: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 }
 
-.card-item:hover {
+.product-item:hover {
   box-shadow: var(--card-shadow);
 }
 
 /* Кожен третій margin-right: 0 */
-.card-item:nth-child(3n) {
+.product-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.card {
+.product-card {
   border: 1px solid #eee;
   border-radius: 4px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+/* Головний контейнер для зображення та дії */
+
+.product-thumb {
+  position: relative;
   overflow: hidden;
 }
 
-.card-content {
+.product-thumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 333ms var(--timing-function);
+}
+
+.product-card:hover .product-thumb::before {
+  transform: translateY(0);
+}
+
+.product-action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Горизонтальне центрування */
+  align-items: center; /* Вертикальне центрування */
+
+  transform: translateY(100%); /* Початковий стан – приховано внизу */
+  transition: transform 333ms var(--timing-function);
+}
+
+.product-card:hover .product-action {
+  transform: translateY(0); /* Переміщуємо елемент на своє місце */
+}
+
+.product-description {
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  /* line-height: 28px; */
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.product-content {
   padding: 10px;
 }
 
-.card-title {
+.product-title {
   margin-top: 20px;
 }
 
-.card-object {
-  margin-top: 20px;
-}
-
-.card-desc {
+.product-object {
   margin-top: 20px;
 }
