@@ -5,6 +5,8 @@
   --primary-white-color: #ffffff;
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body {
@@ -108,31 +110,53 @@ img {
   align-items: center;
 }
 
-.site-nav {
+.menu {
   display: flex;
   padding: 0;
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.menu-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .link {
+.menu-link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.menu-link:hover,
+.menu-link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.menu-link.current {
   color: var(--accent-color);
 }
 
+.menu-link.current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+
+  transform: scaleX(1);
+  transition: transform 250ms var(--timing-function);
+}
+
+.menu-link.current:hover::after {
+  transform: scaleX(0.2);
+}
 /* Contact nav */
 
 .contact-nav {
