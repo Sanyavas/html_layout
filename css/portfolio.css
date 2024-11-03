@@ -6,8 +6,11 @@
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Кнопки */
-
+/*
+ |============================
+ | Button section
+ |============================
+*/
 .card-set-btn {
   display: flex;
   list-style: none;
@@ -34,6 +37,12 @@
   box-shadow: var(--btn-shadow);
 }
 
+/*
+ |============================
+ | Product section
+ |============================
+*/
+
 .product-list {
   padding: 0;
   margin: 0;
@@ -56,8 +65,7 @@
   box-shadow: var(--card-shadow);
 }
 
-/* Кожен третій margin-right: 0 */
-.product-item:nth-child(3n) {
+.product-item:nth-child(3n) { /* Кожен третій margin-right: 0 */
   margin-right: 0;
 }
 
@@ -94,6 +102,8 @@
   transform: translateY(0);
 }
 
+/* Контейнер для прихованого тексту */
+
 .product-action {
   position: absolute;
   top: 0;
@@ -117,8 +127,6 @@
   font-size: 18px;
   padding-left: 24px;
   padding-right: 24px;
-
-  /* line-height: 28px; */
   line-height: 156%;
   letter-spacing: 0.03em;
   color: #fff;

@@ -4,8 +4,11 @@
 основний сірий фон background: #2F303A;
 */
 
-/* Hero section */
-
+/*
+ |============================
+ | Hero section
+ |============================
+*/
 .hero-section {
   height: 600px;
   color: var(--primary-white-color);
@@ -42,8 +45,11 @@
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Soft skills */
-
+/*
+ |============================
+ | Soft skills section
+ |============================
+*/
 .skills {
   padding-top: 94px;
 }
@@ -85,8 +91,11 @@
   margin-top: 10px;
 }
 
-/* Experience */
-
+/*
+ |============================
+ | Experience section
+ |============================
+*/
 .experience {
   display: block;
   padding-top: 94px;
@@ -110,7 +119,11 @@
   list-style: none;
 }
 
-/* Team */
+/*
+ |============================
+ | Team section
+ |============================
+*/
 
 .team {
   /* outline: 1px solid tomato; */
@@ -213,7 +226,11 @@
   background-color: var(--accent-color);
 }
 
-/* Clients */
+/*
+ |============================
+ | Clients section
+ |============================
+*/
 
 .clients {
   /* display: block; */
