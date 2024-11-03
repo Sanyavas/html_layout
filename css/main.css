@@ -323,7 +323,7 @@ img {
 
 /*
  |============================
- | Backdrop
+ | Backdrop | Modal Windows
  |============================
 */
 
@@ -340,9 +340,6 @@ img {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none; /* Щоб пропускав через себе події */
-}
-
-.backdrop.is-hidden .close-modal {
   cursor: default; /* Щоб курсор змінювався після закриття вікна */
 }
 

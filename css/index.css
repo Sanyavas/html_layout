@@ -272,10 +272,13 @@
 .client-icon {
   width: 75px;
   height: 75px;
+  transition-duration: 400ms;
 }
 
-.client-icon:hover {
+.client-icon:hover, 
+.client-icon:focus {
   transform: scale(1.4);
+  transition: transform 400ms var(--timing-function);
   cursor: pointer;
 }
 
