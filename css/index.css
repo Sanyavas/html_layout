@@ -272,7 +272,7 @@
 .client-icon {
   width: 75px;
   height: 75px;
-  transition-duration: 400ms;
+  transition-duration: 800ms;
 }
 
 .client-icon:hover, 

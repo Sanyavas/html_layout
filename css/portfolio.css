@@ -28,6 +28,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 15px;
+
 }
 
 .card-btn:hover,
@@ -35,6 +36,7 @@
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: var(--btn-shadow);
+
 }
 
 /*
