@@ -12,11 +12,7 @@
 .hero-section {
   height: 600px;
   color: var(--primary-white-color);
-  background-image: linear-gradient(
-      to right,
-      rgba(70, 64, 36, 0.4),
-      rgba(101, 133, 29, 0.4)
-    ),
+  background-image: linear-gradient(to right, rgba(70, 64, 36, 0.4), rgba(101, 133, 29, 0.4)),
     url(../img/hero_img.jpg);
   background-size: cover;
   background-position: center;
@@ -73,6 +69,7 @@
   align-items: center;
   width: 270px;
   height: 120px;
+  border-radius: 4px;
   background-color: #f5f4fa;
   margin-bottom: 10px; /* Відступ між фоном та текстом */
 }
@@ -117,8 +114,41 @@
   justify-content: space-between; /* Додає простір між елементами */
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
   list-style: none;
+  overflow: hidden;
 }
 
+.experience-item {
+  position: relative;
+}
+
+.experience-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center; /* Горизонтальне центрування */
+  align-items: center; /* Вертикальне центрування */
+  opacity: 1;
+  transform: translateY(100%); /* Початковий стан – приховано внизу */
+  transition: transform 333ms var(--timing-function);
+  pointer-events: none;
+}
+
+.experience-item:hover .experience-action {
+  transform: translateY(0); /* Переміщуємо елемент на своє місце */
+}
+
+.experience-description {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
 /*
  |============================
  | Team section
@@ -275,7 +305,7 @@
   transition-duration: 800ms;
 }
 
-.client-icon:hover, 
+.client-icon:hover,
 .client-icon:focus {
   transform: scale(1.4);
   transition: transform 400ms var(--timing-function);
