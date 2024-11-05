@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Contact</title>
+  <link rel="stylesheet" href="./css/test.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Add New Contact</h2>
+  
+  <form>
+    <div class="avatar-section">
+      <label for="avatar">Update Avatar</label>
+      <div class="avatar-upload">
+        <img src="placeholder.png" alt="Avatar">
+        <input type="file" id="avatar" name="avatar">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="company-name">Company Name</label>
+      <input type="text" id="company-name" name="company-name">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+      </div>
+      <div class="form-group">
+        <label for="country">Country *</label>
+        <select id="country" name="country" required>
+          <option value="">Select a country</option>
+          <!-- Add country options here -->
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+    </div>
+
+    <div class="form-buttons">
+      <button type="button" class="cancel-btn">Cancel</button>
+      <button type="submit" class="save-btn">Save</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
