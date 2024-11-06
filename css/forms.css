@@ -36,17 +36,18 @@
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
-.close-modal {
+.close-modal-btn {
   position: absolute;
   top: 5px;
   right: 5px;
   cursor: pointer;
-  fill: #fff;
+  --color1: #fff; /* Змінює колір фону (білий за замовчуванням) */
+  --color2: var(--primary-text-color);  /* Змінює чорний колір на червоний */
 }
 
-.close-modal:hover,
-.close-modal:focus {
-  fill: var(--accent-color);
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  --color1: rgba(33, 33, 33, 0.1);
 }
 
 .form-title {
