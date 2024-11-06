@@ -264,7 +264,7 @@ img {
   color: var(--accent-color);
 }
 
-/* social links */
+/* social links in footer */
 
 .footer-social {
   display: inline-block;
@@ -274,16 +274,17 @@ img {
   justify-content: center;
 }
 
-.footer-social-list {
-  display: flex;
-  padding: 0;
-}
-
 .footer-social-title {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 72px;
+}
+
+.footer-social-list {
+  display: flex;
+  padding: 0;
+  margin-top: 20px;
 }
 
 .footer-social-background {
@@ -292,7 +293,7 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
-  margin-top: 20px;
+  
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }

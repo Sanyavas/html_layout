@@ -42,13 +42,19 @@
   right: 5px;
   cursor: pointer;
   --color1: #fff; /* Змінює колір фону (білий за замовчуванням) */
-  --color2: var(--primary-text-color);  /* Змінює чорний колір на червоний */
+  --color2: var(--primary-text-color); /* Змінює чорний колір на червоний */
 }
 
 .close-modal-btn:hover,
 .close-modal-btn:focus {
   --color1: rgba(33, 33, 33, 0.1);
 }
+
+/*
+ |============================
+ | Form in index.html
+ |============================
+*/
 
 .form-title {
   font-weight: 700;
@@ -208,4 +214,71 @@
 
   font-size: 16px; /* Розмір тексту, якщо необхідно */
   cursor: pointer;
+}
+
+/*
+ |============================
+ | Form in footer
+ |============================
+*/
+
+.footer-subscribe-form {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  justify-content: center;
+}
+
+.subscribe-form-title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 72px;
+}
+
+.subscribe-form-input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(33, 150, 243, 0);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+
+.subscribe-form-input:focus,
+.subscribe-form-input:not(:placeholder-shown) {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  outline: 1px solid rgba(255, 255, 255, 0.9);
+  background: #fff;
+  color: var(--primary-text-color);
+}
+
+.btn-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.subscribe-form-btn {
+  display: flex;
+  align-items: center; /* Вертикальне вирівнювання елементів */
+  justify-content: center; /* Горизонтальне вирівнювання елементів */
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding-left: auto;
+}
+
+.icon-subscribe {
+  margin-left: 10px; /* Відступ між текстом і іконкою */
+  fill: #fff;
+}
+
+.subscribe-form-btn:hover .icon-subscribe {
+  fill: var(--accent-color);
 }
