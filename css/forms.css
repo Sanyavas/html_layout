@@ -1,0 +1,210 @@
+/*
+ |============================
+ | Backdrop | Modal Windows
+ |============================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none; /* Щоб пропускав через себе події */
+  cursor: default; /* Щоб курсор змінювався після закриття вікна */
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  fill: #fff;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--accent-color);
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+  padding-bottom: 18px;
+}
+
+.form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  position: absolute;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.form-input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  padding-left: 32px;
+  font: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateX(-38px) translateY(-36px);
+}
+
+.form-input:focus {
+  outline: 1px solid var(--accent-color);
+  border: 1px solid transparent;
+}
+
+.icon-input {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-text-color);
+}
+
+.form-input:focus ~ .icon-input {
+  fill: var(--accent-color);
+}
+
+.form-textarea-label {
+  position: absolute;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+
+  top: 20px;
+  left: 40px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.form-textarea-input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  padding-left: 32px;
+  font: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-textarea-input:focus {
+  outline: 1px solid var(--accent-color);
+  border: 1px solid transparent; /* Переконаємося, що стиль фокусу застосовується */
+}
+
+.form-textarea-input:focus + .form-textarea-label,
+.form-textarea-input:not(:placeholder-shown) + .form-textarea-label {
+  transform: translateX(-38px) translateY(-36px);
+}
+
+.icon-textarea {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-text-color);
+}
+
+.form-textarea-input:focus ~ .icon-textarea {
+  fill: var(--accent-color);
+}
+
+.label-checkbox {
+  display: block; /* Щоб мати можливість застосувати text-align */
+  text-align: center; /* Центрування тексту всередині */
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-chackbox {
+  font-weight: 400;
+  font-size: 14px;
+
+  /* line-height: 24px; */
+  line-height: 171%;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.contract-link {
+  color: var(--accent-color); /* Колір посилання */
+  text-decoration: underline; /* Підкреслення */
+  cursor: pointer; /* Курсор для натискання */
+}
+
+.contract-link:hover {
+  color: #1976d2; /* Інший колір при наведенні */
+  text-decoration: none; /* Приберіть підкреслення при наведенні, якщо потрібно */
+}
+
+.form-button {
+  display: flex; /* Використовуємо flex для центрування кнопки */
+  justify-content: center; /* Горизонтальне центрування */
+  text-align: center;
+}
+
+.send-btn {
+  display: flex;
+  justify-content: center; /* Горизонтальне центрування тексту */
+  align-items: center; /* Вертикальне центрування тексту */
+
+  width: 200px;
+  height: 50px;
+
+  font-size: 16px; /* Розмір тексту, якщо необхідно */
+  cursor: pointer;
+}

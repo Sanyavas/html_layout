@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add New Contact</title>
-  <link rel="stylesheet" href="./css/test.css">
-</head>
-<body>
-
-<div class="form-container">
-  <h2>Add New Contact</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Contact</title>
+    <link rel="stylesheet" href="./css/test.css" />
+  </head>
+  <body>
+    <form class="form">
+      <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
+      <label class="form-field">
+        <input type="text" class="form-input" name="name" placeholder=" " />
+        <span class="form-label">Ім'я</span>
+        <svg class="icon-input" width="20" height="20" data-modal-close>
+          <use href="./img/sprite.svg#icon-person"></use>
+        </svg>
+      </label>
   
-  <form>
-    <div class="avatar-section">
-      <label for="avatar">Update Avatar</label>
-      <div class="avatar-upload">
-        <img src="placeholder.png" alt="Avatar">
-        <input type="file" id="avatar" name="avatar">
+      <label class="form-field">
+        <input type="tel" class="form-input" name="name" placeholder=" " />
+        <span class="form-label">Телефон</span>
+        <svg class="icon-input" width="20" height="20" data-modal-close>
+          <use href="./img/sprite.svg#icon-phone"></use>
+        </svg>
+      </label>
+      <label class="form-field">
+        <input type="email" class="form-input" name="name" placeholder=" " />
+        <span class="form-label">Пошта</span>
+        <svg class="icon-input" width="20" height="20" data-modal-close>
+          <use href="./img/sprite.svg#icon-email"></use>
+        </svg>
+      </label>
+      <label class="form-field">
+        <textarea name="notes" class="form-textarea-input" rows="4" placeholder=" "></textarea>
+        <span class="form-textarea-label">Коментар</span>
+        <svg class="icon-textarea" width="20" height="20" data-modal-close>
+          <use href="./img/sprite.svg#icon-pencil"></use>
+        </svg>
+      </label>
+
+      <label>
+        <input type="checkbox" class="form-chackbox" name="hobby" value="music" checked />
+        Погоджуюся з розсилкою та приймаю Умови договору
+      </label>
+
+      <div class="form-button">
+        <button type="submit" class="send-btn">Відправити</button>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="company-name">Company Name</label>
-      <input type="text" id="company-name" name="company-name">
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city">
-      </div>
-      <div class="form-group">
-        <label for="country">Country *</label>
-        <select id="country" name="country" required>
-          <option value="">Select a country</option>
-          <!-- Add country options here -->
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes" rows="4"></textarea>
-    </div>
-
-    <div class="form-buttons">
-      <button type="button" class="cancel-btn">Cancel</button>
-      <button type="submit" class="save-btn">Save</button>
-    </div>
-  </form>
-</div>
-
-</body>
+    </form>
+  </body>
 </html>
