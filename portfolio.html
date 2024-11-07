@@ -16,8 +16,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/portfolio.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+
   </head>
   <body>
     <!-- Шапка сторінки -->
@@ -258,7 +258,9 @@
                 >vasilinaoleksandr@gmail.com</a
               >
             </li>
-            <li><a class="text-grey-contact" href="tel:+380671234567">+380671234567</a></li>
+            <li>
+              <a class="text-grey-contact" href="tel:+380671234567">+380671234567</a>
+            </li>
           </ul>
         </div>
 
@@ -292,8 +294,24 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe-form">
+          <h2 class="subscribe-form-title">Підпишіться на розсилку</h2>
+          <form>
+              <input type="email" class="subscribe-form-input" placeholder="   E-mail">
+
+              <div class="btn-icon">
+                <button class="subscribe-form-btn button primary" type="submit">
+                  Підписатися
+                  <svg class="icon-subscribe" width="25" height="25">
+                    <use href="./img/sprite.svg#icon-telegram"></use>
+                  </svg>
+                </button>
+              </div>
+          </form>
+      </div>
       </div>
       <p class="footer-end">Всі права захищені Sanyavas &copy; 2024</p>
     </footer>
+
   </body>
 </html>
