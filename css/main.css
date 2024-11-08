@@ -626,8 +626,8 @@ img {
 
 :root {
   --card-set-gap: 30px;
-  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --btn-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -691,7 +691,8 @@ img {
   box-shadow: var(--card-shadow);
 }
 
-.product-item:nth-child(3n) { /* Кожен третій margin-right: 0 */
+.product-item:nth-child(3n) {
+  /* Кожен третій margin-right: 0 */
   margin-right: 0;
 }
 
@@ -726,6 +727,13 @@ img {
   transform: translateY(0);
 }
 
+.product-img {
+  width: 100%;
+  max-height: 290px;
+  object-fit: cover; /* обрізає частини зображення, що виходять за межі, зберігаючи його */
+  object-position: top;
+}
+
 /* Контейнер для прихованого тексту */
 .product-action {
   position: absolute;
@@ -755,15 +763,27 @@ img {
 }
 
 .product-content {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .product-title {
   margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: 0.06em;
 }
 
 .product-object {
-  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  /* line-height: 30px; */
+  line-height: 187%;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
 
 /*
@@ -1036,4 +1056,4 @@ img {
 
 .subscribe-form-btn:hover .icon-subscribe {
   fill: var(--accent-color);
-}/*# sourceMappingURL=main.css.map */
+}
