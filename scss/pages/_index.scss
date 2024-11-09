@@ -89,6 +89,10 @@
   display: block;
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .experience-title {
@@ -255,7 +259,7 @@
 */
 
 .clients {
-  /* display: block; */
+  display: block;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -268,24 +272,18 @@
 }
 
 .client-list {
+  padding: 0;
+  padding-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Додає простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
 }
 
 .client-item {
-  padding: 0;
-  margin: 0;
-  padding-top: 50px;
   display: flex;
-  justify-content: center; /* Додає простір між елементами */
-  list-style: none;
-}
-
-.client-background {
-  display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 130px;
+  width: 100px;
   height: 100px;
   border-radius: 8px;
   background-color: #fff;
@@ -302,10 +300,6 @@
   transform: scale(1.4);
   transition: transform 400ms var(--timing-function);
   cursor: pointer;
-}
-
-.client-item:not(:last-child) {
-  margin-right: 20px;
 }
 
 
