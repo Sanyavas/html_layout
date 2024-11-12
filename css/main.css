@@ -14,6 +14,7 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   line-height: 1.2;
+  margin: 0;
 }
 
 body.modal-open {
@@ -71,6 +72,7 @@ p {
 
 img,
 iframe {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -206,7 +208,8 @@ iframe {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgb(231, 230, 220);
+    background-color: #f5f4fa;
+    z-index: 1000; /* Встановлює меню найвищим елементом */
   }
   .menu-container.is-open {
     display: block;
@@ -912,7 +915,8 @@ iframe {
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-top: 94px;
+  margin-top: 60px;
+  padding: 0;
   flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок */
 }
 
@@ -945,28 +949,20 @@ iframe {
 .product-list {
   padding: 0;
   margin: 0;
-  margin-bottom: var(--card-set-gap);
   display: flex;
   flex-wrap: wrap;
+  gap: var(--card-set-gap); /* Використовуємо gap для проміжків між елементами */
   margin-top: 20px;
   margin-bottom: 94px;
 }
 
 .product-item {
-  /* outline: 1px solid tomato; */
-  flex-basis: calc(33.3333333333% - 21px);
-  margin-right: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: 100%; /* 100% ширини для екранів до 767px */
   border-radius: 4px;
 }
 
 .product-item:hover {
   box-shadow: var(--card-shadow);
-}
-
-.product-item:nth-child(3n) {
-  /* Кожен третій margin-right: 0 */
-  margin-right: 0;
 }
 
 .product-card {
@@ -976,6 +972,18 @@ iframe {
   border-radius: 4px;
 }
 
+/* Від 768px до 1199px: два елементи в рядку */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .product-item {
+    flex-basis: calc(50% - var(--card-set-gap) / 2); /* 50% ширини з проміжками */
+  }
+}
+/* Від 1200px і більше: три елементи в рядку */
+@media (min-width: 1200px) {
+  .product-item {
+    flex-basis: calc(33.33% - var(--card-set-gap) * 2 / 3); /* 33.33% ширини з проміжками */
+  }
+}
 /* Головний контейнер для зображення та дії */
 .product-thumb {
   position: relative;
@@ -1001,8 +1009,9 @@ iframe {
 }
 
 .product-img {
+  outline: 5px solid rgba(33, 150, 243, 0.7);
   width: 100%;
-  max-height: 290px;
+  max-height: 294px;
   object-fit: cover; /* обрізає частини зображення, що виходять за межі, зберігаючи його */
   object-position: top;
 }

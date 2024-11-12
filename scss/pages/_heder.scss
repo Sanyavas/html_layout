@@ -14,7 +14,7 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   line-height: 1.2;
-  // margin: 0;
+  margin: 0;
 }
 
 body.modal-open {
@@ -72,6 +72,7 @@ p {
 
 img,
 iframe {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -223,7 +224,8 @@ iframe {
     left: 0;
     width: 100%;
 
-    background-color: rgb(231, 230, 220);
+    background-color: #f5f4fa;
+    z-index: 1000; /* Встановлює меню найвищим елементом */
   }
   .menu-container.is-open {
     display: block;
