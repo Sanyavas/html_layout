@@ -1110,7 +1110,6 @@ iframe {
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  outline: 1px solid tomato;
   padding: 10px;
   border: 1px solid #eee;
   border-radius: 4px;
