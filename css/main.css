@@ -576,7 +576,7 @@ iframe {
 .hero-section {
   height: 600px;
   color: var(--primary-white-color);
-  background-image: linear-gradient(to right, rgba(70, 64, 36, 0.4), rgba(101, 133, 29, 0.4)), url(../img/hero_img.jpg);
+  background-image: linear-gradient(to right, rgba(70, 64, 36, 0.4), rgba(101, 133, 29, 0.4)), url(../img/hero_mobile.jpg);
   background-size: cover;
   background-position: center;
   display: flex; /*  перетворює .hero-section на flex-контейнер. */
@@ -586,6 +586,16 @@ iframe {
   text-align: center; /* центрує текст. */
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(70, 64, 36, 0.4), rgba(101, 133, 29, 0.4)), url(../img/hero_tablet.jpg);
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(70, 64, 36, 0.4), rgba(101, 133, 29, 0.4)), url(../img/hero_img.jpg); /* Велике зображення для екранів від 1200px */
+  }
+}
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
