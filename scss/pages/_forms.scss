@@ -1,6 +1,6 @@
 /*
  |============================
- | Backdrop | Modal Windows
+ | Backdrop 
  |============================
 */
 
@@ -9,31 +9,60 @@
   top: 0;
   left: 0;
 
+  padding: 30px 15px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+
+  overflow-y: auto;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none; /* Щоб пропускав через себе події */
   cursor: default; /* Щоб курсор змінювався після закриття вікна */
+  display: none;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/*
+ |============================
+ | Form | Modal Windows in index.html
+ |============================
+*/
 
-  width: 528px;
-  height: 581px;
+.modal {
+  position: absolute; /* Для невеликих екранів, щоб модальне вікно розташовувалося щодо backdrop */
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  outline: 1px solid tomato;
+  padding: 10px;
   border: 1px solid #eee;
   border-radius: 4px;
   background-color: #fff;
-  padding: 40px;
+
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+    @media (max-width: 480px) {
+      width: 90%;
+      
+    }
+
+    @media (min-width: 480px) and (min-height: 610px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 450px;
+      height: 609px;
+    }
+  
+    @media (min-width: 1200px) {
+      width: 528px;
+      height: 581px;
+    }
 }
 
 .close-modal-btn {
@@ -50,11 +79,9 @@
   --color1: rgba(33, 33, 33, 0.1);
 }
 
-/*
- |============================
- | Form in index.html
- |============================
-*/
+.form {
+  padding: 10px;
+}
 
 .form-title {
   font-weight: 700;
@@ -88,7 +115,6 @@
   width: 100%;
   margin: 0;
   padding: 10px 20px;
-  padding-left: 32px;
   font: inherit;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -215,4 +241,3 @@
   font-size: 16px; /* Розмір тексту, якщо необхідно */
   cursor: pointer;
 }
-

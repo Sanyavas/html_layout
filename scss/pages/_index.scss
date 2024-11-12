@@ -31,6 +31,10 @@
   text-transform: uppercase;
   line-height: 1.4;
   letter-spacing: 0.06em;
+
+  @media (max-width: 310px) {
+    font-size: 32px;
+  }
 }
 
 /*
@@ -52,14 +56,23 @@
 }
 
 .skill-item {
-  max-width: 270px;
+  max-width: 450px;
+  padding-bottom: 20px;
+
+  @media (min-width: 767px) {
+    max-width: 354px;
+  }
+
+  @media (min-width: 1199px) {
+    max-width: 270px;
+  }
 }
 
 .skill-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%; /* Відповідатиме ширині `skill-item` */
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
@@ -152,7 +165,7 @@
 */
 
 .team {
-  /* outline: 1px solid tomato; */
+  //  outline: 1px solid tomato; 
   background-color: var(--light-bg-color);
   padding-top: 94px;
   padding-bottom: 94px;
@@ -177,18 +190,42 @@
 }
 
 .team-item {
+  // outline: 1px solid tomato; 
+  margin-bottom: 20px;
   text-align: center;
-  max-width: 270px;
+  max-width: 460px;
   background-color: #fff;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+  @media (min-width: 768px) {
+    width: 356px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .team-img {
-  width: 270px; /* Відповідає ширині зображення */
-  height: 320px; /* Бажана висота */
-  overflow: hidden; /* Приховує частини, які виходять за межі */
-  position: relative; /* Необхідно для абсолютного позиціювання дочірніх елементів */
+  width: 100%; /* Ширина займає 100% від контейнера */
+  height: auto; /* Висота автоматично коригується для збереження пропорцій */
+  max-height: 460px; /* Максимальна висота для більших екранів */
+  object-fit: cover; /* Зображення заповнює контейнер, обрізається */
+  object-position: center; /* Центрує зображення по вертикалі та горизонталі */
+  overflow: hidden; /* Приховує частини, що виходять за межі */
+
+  @media (min-width: 768px) {
+    max-height: 374px; /* Висота для екранів середнього розміру */
+  }
+
+  @media (min-width: 1200px) {
+    max-height: 260px; /* Висота для великих екранів */
+  }
+
+  @media (max-width: 480px) {
+    max-height: 96vw; /* Висота змінюється пропорційно ширині екрана */
+  }
 }
 
 .team-name {
@@ -202,6 +239,15 @@
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
+}
+
+.team-social {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .team-social-background {
@@ -225,15 +271,6 @@
   width: 100%;
   height: 100%;
   text-decoration: none;
-}
-
-.team-social {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  margin-top: 16px;
-  margin-bottom: 30px;
-  justify-content: center;
 }
 
 .team-social .icon {
@@ -301,5 +338,3 @@
   transition: transform 400ms var(--timing-function);
   cursor: pointer;
 }
-
-
