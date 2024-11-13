@@ -9,6 +9,8 @@
   --dark-theme-primary-color: rgba(38, 50, 56, 1);
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+  0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -156,8 +158,7 @@ iframe {
 .button.primary:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 /*
@@ -196,7 +197,7 @@ iframe {
 }
 
 .setting-button {
-
+fill: var(--primary-text-color);
 }
 
 .setting-button .icon-cross {
@@ -216,7 +217,7 @@ iframe {
   top: 0;
   min-width: 300px;
   height: 100vh; /* Встановлює висоту на всю висоту екрану */
-  background-color: rgba(245, 244, 250, 1);
+  background-color: rgba(245, 244, 250, 0.9);
   display: flex;
   opacity: 1; /* Початково приховує контейнер */
   transform: translateX(-100%);
@@ -234,11 +235,40 @@ iframe {
   pointer-events: auto;
 }
 
-.theme-dark-btn {
+.theme-toggle-btn {
   position: absolute;
   top: 40px;
   right: 10px;
   transform: translateY(-50%);
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  // background-color: transparent;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 998;
+}
+
+.icon-sun {
+  fill: goldenrod;
+  background-color: transparent;
+}
+
+.icon-moon {
+  fill: var(--dark-bg-color)
+}
+
+.theme-dark-btn .icon-moon {
+  display: none;
+}
+
+.theme-dark-btn.dark .icon-moon {
+  display: block;
+}
+
+.theme-dark-btn.dark .icon-sun {
+  display: none;
 }
 
 /*

@@ -15,6 +15,7 @@
   <body>
     <!-- Шапка сторінки -->
     <header class="page-header">
+      <!-- Меню налаштувань -->
       <div class="setting">
         <button
           type="button"
@@ -42,14 +43,27 @@
               </svg>
             </button>
             <div class="theme-dark-btn">
-              <button id="theme-toggle-btn">Змінити тему</button>
+              <button
+                type="button"
+                id="theme-toggle-btn"
+                class="theme-toggle-btn"
+                aria-expanded="false"
+                
+              >
+                <svg width="40" height="40" aria-label="Перемикач теми">
+                  <use class="icon-moon" href="./img/sprite.svg#icon-moon"></use>
+                  <use class="icon-sun" href="./img/sprite.svg#icon-sun"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Меню навігації -->
       <div class="container main-nav">
         <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span> </a>
+        <!-- Кнопка навігації мобільної версії -->
         <button
           type="button"
           class="menu-button"
