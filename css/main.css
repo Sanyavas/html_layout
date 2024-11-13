@@ -192,7 +192,17 @@ iframe {
 }
 
 .setting-button {
+  display: flex;
+  flex-direction: column; /* Вирівнювання іконки та тексту по вертикалі */
+  align-items: center; /* Центрування іконки та тексту */
+  justify-content: center; /* Центрування елементів по вертикалі */
+  text-align: center; /* Центрування тексту */
   fill: var(--primary-text-color);
+}
+
+.button-text {
+  margin-top: 0; /* Відстань між іконкою та текстом */
+  font-size: 11px; /* Розмір шрифту для тексту */
 }
 
 .setting-button .icon-cross {
