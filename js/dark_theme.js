@@ -1,5 +1,5 @@
 // Отримуємо кнопку перемикання теми
-const themeToggleButton = document.getElementById('theme-toggle-button');
+const themeToggleButton = document.getElementById('theme-toggle-btn');
 
 // Перевіряємо, чи вже збережена темна тема в localStorage
 if (localStorage.getItem('theme') === 'dark') {

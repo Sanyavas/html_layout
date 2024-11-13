@@ -6,6 +6,7 @@
   --primary-white-color: #ffffff;
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
+  --dark-theme-primary-color: rgba(38, 50, 56, 1);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -15,6 +16,10 @@ body {
   font-family: Roboto, sans-serif;
   line-height: 1.2;
   margin: 0;
+}
+
+body.dark-theme {
+  background-color: var(--dark-theme-primary-color);
 }
 
 body.modal-open {
@@ -92,6 +97,8 @@ iframe {
   font-family: Raleway, sans-serif;
   font-size: 26px;
   font-weight: 700;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .logo:hover {
@@ -143,7 +150,78 @@ iframe {
 
 /*
  |============================
+ |============================
  | Header section
+ |============================
+ |============================
+*/
+/*
+ |============================
+ | Setting 
+ |============================
+*/
+.setting {
+  position: relative;
+}
+
+/* Загальні стилі для всіх кнопок */
+.btn-common {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 998;
+}
+
+.setting-button .icon-cross {
+  display: none;
+}
+
+.setting-button.is-open .icon-cross {
+  display: block;
+}
+
+.setting-button.is-open .icon-menu {
+  display: none;
+}
+
+.setting-container {
+  position: absolute;
+  top: 0;
+  min-width: 300px;
+  height: 100vh; /* Встановлює висоту на всю висоту екрану */
+  background-color: rgb(245, 244, 250);
+  display: flex;
+  opacity: 1; /* Початково приховує контейнер */
+  transform: translateX(-100%);
+  transition: transform 500ms var(--timing-function), opacity 300ms ease;
+  pointer-events: none;
+  align-items: center;
+  z-index: 1000; /* Додаємо високий z-index */
+}
+
+.setting-container.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.theme-dark-btn {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/*
+ |============================
+ | Main menu navigation
  |============================
 */
 /* Site nav */
@@ -151,6 +229,23 @@ iframe {
   border-bottom: 1px solid #ececec;
 }
 
+.main-nav {
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Застосувати тільки для .main-nav всередині .menu-container */
+@media screen and (min-width: 768px) {
+  .menu-container .main-nav {
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+}
 .menu-button {
   position: absolute;
   top: 50%; /* Відступ від верхнього краю */
@@ -161,6 +256,7 @@ iframe {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -180,22 +276,6 @@ iframe {
   display: none;
 }
 
-.main-nav {
-  position: relative; /* Щоб абсолютна кнопка позиціонувалася щодо цього контейнера */
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .main-nav {
-    margin: auto;
-    display: flex;
-    align-items: center;
-  }
-}
 .menu-container {
   display: none;
   text-align: center;
@@ -209,7 +289,7 @@ iframe {
     left: 0;
     width: 100%;
     background-color: #f5f4fa;
-    z-index: 1000; /* Встановлює меню найвищим елементом */
+    z-index: 10; /* Встановлює меню найвищим елементом */
   }
   .menu-container.is-open {
     display: block;
@@ -368,7 +448,9 @@ iframe {
 
 /*
  |============================
+ |============================
  | Footer section
+ |============================
  |============================
 */
 .footer {
@@ -1102,11 +1184,11 @@ iframe {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 30px 15px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   overflow-y: auto;
+  z-index: 999; /* Додаємо трохи менший z-index, ніж у .setting-container */
 }
 
 .backdrop.is-hidden {

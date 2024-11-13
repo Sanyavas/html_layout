@@ -15,6 +15,39 @@
   <body>
     <!-- Шапка сторінки -->
     <header class="page-header">
+      <div class="setting">
+        <button
+          type="button"
+          class="setting-button btn-common"
+          aria-expanded="false"
+          aria-controls="setting-container"
+          data-setting-button
+        >
+          <svg width="40" height="40" aria-label="Перемикач меню налаштувань">
+            <use class="icon-menu" href="./img/sprite.svg#icon-apps"></use>
+          </svg>
+        </button>
+
+        <div class="backdrop is-hidden" data-setting-backdrop>
+          <div class="setting-container" id="setting-container" data-setting>
+            <button
+              type="button"
+              class="setting-close-button btn-common"
+              aria-expanded="true"
+              aria-controls="setting-container"
+              data-setting-button
+            >
+              <svg width="40" height="40" aria-label="Закрити меню налаштувань">
+                <use class="icon-cross" href="./img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="theme-dark-btn">
+              <button id="theme-toggle-btn">Змінити тему</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container main-nav">
         <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span> </a>
         <button
@@ -29,7 +62,7 @@
             <use class="icon-menu" href="./img/sprite.svg#menu"></use>
           </svg>
         </button>
-    
+
         <nav class="menu-container" id="menu-container" data-menu>
           <div class="navigation">
             <ul class="menu-list list">
@@ -43,7 +76,7 @@
               <li class="menu-item"><a href="#" class="menu-link">About</a></li>
             </ul>
           </div>
-    
+
           <div class="contacts">
             <ul class="contact-nav list">
               <li class="contact-item nav-icon">
@@ -67,7 +100,6 @@
         </nav>
       </div>
     </header>
-    
 
     <!-- Унікальний контент сторінки -->
     <main>
@@ -436,7 +468,7 @@
           <label class="form-field">
             <input type="text" class="form-input" name="name" placeholder=" " />
             <span class="form-label">Ім'я</span>
-            <svg class="icon-input" width="20" height="20" data-modal-close>
+            <svg class="icon-input" width="20" height="20">
               <use href="./img/sprite.svg#icon-person"></use>
             </svg>
           </label>
@@ -444,21 +476,21 @@
           <label class="form-field">
             <input type="tel" class="form-input" name="phone" placeholder=" " />
             <span class="form-label">Телефон</span>
-            <svg class="icon-input" width="20" height="20" data-modal-close>
+            <svg class="icon-input" width="20" height="20">
               <use href="./img/sprite.svg#icon-phone"></use>
             </svg>
           </label>
           <label class="form-field">
             <input type="email" class="form-input" name="email" placeholder=" " />
             <span class="form-label">Пошта</span>
-            <svg class="icon-input" width="20" height="20" data-modal-close>
+            <svg class="icon-input" width="20" height="20">
               <use href="./img/sprite.svg#icon-email"></use>
             </svg>
           </label>
           <label class="form-field">
             <textarea name="notes" class="form-textarea-input" rows="6" placeholder=" "></textarea>
             <span class="form-textarea-label">Коментар</span>
-            <svg class="icon-textarea" width="20" height="20" data-modal-close>
+            <svg class="icon-textarea" width="20" height="20">
               <use href="./img/sprite.svg#icon-pencil"></use>
             </svg>
           </label>
@@ -480,5 +512,7 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/dark_theme.js"></script>
+    <script src="./js/setting.js"></script>
   </body>
 </html>
