@@ -229,24 +229,21 @@ iframe {
 .setting-container {
   position: absolute;
   top: 0;
+  left: 0;
   min-width: 300px;
-  height: 100vh; /* Встановлює висоту на всю висоту екрану */
+  height: 100vh; /* Висота на всю висоту екрану */
   background-color: rgba(245, 244, 250, 1);
   display: flex;
-  opacity: 1; /* Початково приховує контейнер */
-  transform: translateX(-100%);
-  transition: transform 500ms var(--timing-function);
-  pointer-events: none;
-  // flex-direction: column; /* Додає вертикальне вирівнювання для вмісту */
-  // align-items: center;
-  // justify-content: center; /* Вирівнює вміст по центру */
-  z-index: 1000; /* Додаємо високий z-index */
+  opacity: 1; /* Початково видно */
+  transform: translateX(-100%); /* Початково за межами екрану */
+  transition: transform 333ms var(--timing-function);
+  // pointer-events: none;
+  // z-index: 1000; /* Додаємо високий z-index */
 }
 
 .setting-container.is-open {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
+  transform: translateX(0); /* Переміщаємо контейнер на екран */
+  // pointer-events: auto; /* Дозволяємо взаємодіяти з контейнером */
 }
 
 .theme-toggle-btn {

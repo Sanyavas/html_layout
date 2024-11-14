@@ -1,6 +1,6 @@
-// Отримуємо кнопку перемикання теми
-const themeToggleButton = document.getElementById('theme-toggle-btn');
+// Логіка виконання темної/світлої теми
 
+const themeToggleButton = document.getElementById('theme-toggle-btn');
 // Отримуємо контейнер кнопки для перемикання теми
 const themeToggleContainer = themeToggleButton.parentElement;
 

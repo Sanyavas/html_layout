@@ -1,3 +1,5 @@
+
+// Логіка виконання дерева меню
 document.addEventListener('DOMContentLoaded', function () {
   // Знаходимо всі кнопки, що мають клас submenu-toggle
   const submenuButtons = document.querySelectorAll('.submenu-toggle');
