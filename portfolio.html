@@ -16,8 +16,87 @@
     <!-- Шапка сторінки -->
 
     <header class="page-header">
+      <!-- Меню налаштувань -->
+      <section class="setting-menu">
+        <button
+          type="button"
+          class="setting-button btn-common"
+          aria-expanded="false"
+          aria-controls="setting-container"
+          data-setting-button
+        >
+          <svg width="40" height="40" aria-label="Перемикач меню налаштувань">
+            <use class="icon-menu" href="./img/sprite.svg#icon-apps"></use>
+          </svg>
+          <span class="button-text">menu</span>
+          <!-- Текст додається тут -->
+        </button>
+
+        <div class="backdrop is-hidden" data-setting-backdrop>
+          <div class="setting-container" id="setting-container" data-setting>
+            <button
+              type="button"
+              class="setting-close-button btn-common"
+              aria-expanded="true"
+              aria-controls="setting-container"
+              data-setting-button
+            >
+              <svg width="40" height="40" aria-label="Закрити меню налаштувань">
+                <use class="icon-cross" href="./img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="theme-dark-btn">
+              <button
+                type="button"
+                id="theme-toggle-btn"
+                class="theme-toggle-btn"
+                aria-expanded="false"
+              >
+                <svg width="40" height="40" aria-label="Перемикач теми">
+                  <use class="icon-moon" href="./img/sprite.svg#icon-moon"></use>
+                  <use class="icon-sun" href="./img/sprite.svg#icon-sun"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="setting-content">
+      
+              <nav class="tree-menu">
+                <ul>
+                  <li>
+                    <button class="menu-item">Головна</button>
+                  </li>
+                  <li>
+                    <button class="menu-item submenu-toggle">Про нас</button>
+                    <ul class="submenu">
+                      <li><button class="menu-item">Наша історія</button></li>
+                      <li><button class="menu-item">Наша команда</button></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="menu-item submenu-toggle">Послуги</button>
+                    <ul class="submenu">
+                      <li><button class="menu-item">Консультації</button></li>
+                      <li>
+                        <button class="menu-item submenu-toggle">Технічна підтримка</button>
+                        <ul class="submenu">
+                          <li><button class="menu-item">Онлайн підтримка</button></li>
+                          <li><button class="menu-item">Сервісне обслуговування</button></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Меню навігації -->
       <div class="container main-nav">
         <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span> </a>
+        <!-- Кнопка навігації мобільної версії -->
         <button
           type="button"
           class="menu-button"
@@ -280,6 +359,7 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-social">
           <h2 class="footer-social-title">Приєднуйся</h2>
           <ul class="footer-social-list list">
@@ -328,5 +408,8 @@
       <p class="footer-end">Всі права захищені Sanyavas &copy; 2024</p>
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/dark_theme.js"></script>
+    <script src="./js/setting.js"></script>
+    <script src="./js/menu_tree.js"></script>
   </body>
 </html>
