@@ -16,7 +16,7 @@
     <!-- Шапка сторінки -->
     <header class="page-header">
       <!-- Меню налаштувань -->
-      <div class="setting">
+      <section class="setting">
         <button
           type="button"
           class="setting-button btn-common"
@@ -27,7 +27,8 @@
           <svg width="40" height="40" aria-label="Перемикач меню налаштувань">
             <use class="icon-menu" href="./img/sprite.svg#icon-apps"></use>
           </svg>
-          <span class="button-text">menu</span> <!-- Текст додається тут -->
+          <span class="button-text">menu</span>
+          <!-- Текст додається тут -->
         </button>
 
         <div class="backdrop is-hidden" data-setting-backdrop>
@@ -49,7 +50,6 @@
                 id="theme-toggle-btn"
                 class="theme-toggle-btn"
                 aria-expanded="false"
-                
               >
                 <svg width="40" height="40" aria-label="Перемикач теми">
                   <use class="icon-moon" href="./img/sprite.svg#icon-moon"></use>
@@ -57,9 +57,16 @@
                 </svg>
               </button>
             </div>
+            <div class="setting-content">
+              <ul>
+                <li>Hello world</li>
+                <li>Hello world</li>
+                <li>Hello world</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Меню навігації -->
       <div class="container main-nav">

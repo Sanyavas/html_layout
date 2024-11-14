@@ -10,7 +10,7 @@
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
-  0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -169,8 +169,6 @@ iframe {
  |==========================================
 */
 
-
-
 /*
  |============================
  | Setting menu
@@ -199,10 +197,11 @@ iframe {
 .setting-button {
   display: flex;
   flex-direction: column; /* Вирівнювання іконки та тексту по вертикалі */
-  align-items: center;    /* Центрування іконки та тексту */
+  align-items: center; /* Центрування іконки та тексту */
   justify-content: center; /* Центрування елементів по вертикалі */
-  text-align: center;     /* Центрування тексту */
+  text-align: center; /* Центрування тексту */
   fill: var(--primary-text-color);
+  transform-origin: center; /* Масштабування від центру */
 }
 
 .button-text {
@@ -210,6 +209,10 @@ iframe {
   font-size: 11px; /* Розмір шрифту для тексту */
 }
 
+.setting-button:hover,
+.setting-close-button:hover {
+  fill: var(--accent-color);
+}
 
 .setting-button .icon-cross {
   display: none;
@@ -235,7 +238,7 @@ iframe {
   transition: transform 500ms var(--timing-function), opacity 300ms ease;
   pointer-events: none;
   // flex-direction: column; /* Додає вертикальне вирівнювання для вмісту */
-  align-items: center;
+  // align-items: center;
   // justify-content: center; /* Вирівнює вміст по центру */
   z-index: 1000; /* Додаємо високий z-index */
 }
@@ -261,25 +264,35 @@ iframe {
   z-index: 998;
 }
 
+.theme-toggle-btn:hover {
+  background-color: var(--primary-text-color);
+}
+
 .icon-sun {
   fill: goldenrod;
   background-color: transparent;
 }
 
 .icon-moon {
-  fill: var(--dark-bg-color)
+  fill: var(--dark-bg-color);
 }
 
-.theme-dark-btn .icon-moon {
+.theme-dark-btn .icon-sun {
   display: none;
-}
-
-.theme-dark-btn.dark .icon-moon {
-  display: block;
 }
 
 .theme-dark-btn.dark .icon-sun {
+  display: block;
+}
+
+.theme-dark-btn.dark .icon-moon {
   display: none;
+}
+
+// Setting content
+
+.setting-content {
+  padding-top: 80px; /* Відступ зверху */
 }
 
 /*

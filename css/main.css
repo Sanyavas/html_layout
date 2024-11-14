@@ -9,7 +9,7 @@
   --dark-theme-primary-color: rgba(38, 50, 56, 1);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
-  0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -198,11 +198,17 @@ iframe {
   justify-content: center; /* Центрування елементів по вертикалі */
   text-align: center; /* Центрування тексту */
   fill: var(--primary-text-color);
+  transform-origin: center; /* Масштабування від центру */
 }
 
 .button-text {
   margin-top: 0; /* Відстань між іконкою та текстом */
   font-size: 11px; /* Розмір шрифту для тексту */
+}
+
+.setting-button:hover,
+.setting-close-button:hover {
+  fill: var(--accent-color);
 }
 
 .setting-button .icon-cross {
@@ -228,7 +234,6 @@ iframe {
   transform: translateX(-100%);
   transition: transform 500ms var(--timing-function), opacity 300ms ease;
   pointer-events: none;
-  align-items: center;
   z-index: 1000; /* Додаємо високий z-index */
 }
 
@@ -252,6 +257,10 @@ iframe {
   z-index: 998;
 }
 
+.theme-toggle-btn:hover {
+  background-color: var(--primary-text-color);
+}
+
 .icon-sun {
   fill: goldenrod;
   background-color: transparent;
@@ -261,16 +270,20 @@ iframe {
   fill: var(--dark-bg-color);
 }
 
-.theme-dark-btn .icon-moon {
+.theme-dark-btn .icon-sun {
   display: none;
-}
-
-.theme-dark-btn.dark .icon-moon {
-  display: block;
 }
 
 .theme-dark-btn.dark .icon-sun {
+  display: block;
+}
+
+.theme-dark-btn.dark .icon-moon {
   display: none;
+}
+
+.setting-content {
+  padding-top: 80px; /* Відступ зверху */
 }
 
 /*
