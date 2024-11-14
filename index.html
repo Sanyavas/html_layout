@@ -58,11 +58,35 @@
               </button>
             </div>
             <div class="setting-content">
-              <ul>
-                <li>Hello world</li>
-                <li>Hello world</li>
-                <li>Hello world</li>
-              </ul>
+      
+              <nav class="tree-menu">
+                <ul>
+                  <li>
+                    <button class="menu-item">Головна</button>
+                  </li>
+                  <li>
+                    <button class="menu-item submenu-toggle">Про нас</button>
+                    <ul class="submenu">
+                      <li><button class="menu-item">Наша історія</button></li>
+                      <li><button class="menu-item">Наша команда</button></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="menu-item submenu-toggle">Послуги</button>
+                    <ul class="submenu">
+                      <li><button class="menu-item">Консультації</button></li>
+                      <li>
+                        <button class="menu-item submenu-toggle">Технічна підтримка</button>
+                        <ul class="submenu">
+                          <li><button class="menu-item">Онлайн підтримка</button></li>
+                          <li><button class="menu-item">Сервісне обслуговування</button></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              
             </div>
           </div>
         </div>
@@ -536,5 +560,6 @@
     <script src="./js/menu.js"></script>
     <script src="./js/dark_theme.js"></script>
     <script src="./js/setting.js"></script>
+    <script src="./js/menu_tree.js"></script>
   </body>
 </html>

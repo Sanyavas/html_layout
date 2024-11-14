@@ -711,6 +711,31 @@ iframe {
     margin-top: 60px;
   }
 }
+.tree-menu ul {
+  list-style: none; /* Прибираємо маркери списку */
+  margin: 0;
+  padding: 0;
+}
+
+.tree-menu .menu-item {
+  display: block;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.tree-menu .submenu {
+  display: none; /* Спочатку підменю приховане */
+  margin-left: 20px;
+}
+
+.tree-menu .menu-item:hover {
+  color: var(--accent-color);
+}
+
 /*колір основного тексту background: #757575;
 колір заголовку background: #212121;
 синій колір background: #2196F3;

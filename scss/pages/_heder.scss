@@ -736,3 +736,37 @@ iframe {
     margin-top: 60px;
   }
 }
+
+
+// Menu tree
+
+.tree-menu ul {
+  list-style: none; /* Прибираємо маркери списку */
+  margin: 0;
+  padding: 0;
+}
+
+.tree-menu .menu-item {
+  display: block;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.tree-menu .submenu {
+  display: none; /* Спочатку підменю приховане */
+  margin-left: 20px;
+}
+
+// .tree-menu .submenu .menu-item {
+//   background: #e0e0e0; /* Інший фон для підменю */
+  
+// }
+
+.tree-menu .menu-item:hover {
+  // background: #d0d0d0; /* Зміна кольору при наведенні */
+  color: var(--accent-color);
+}
