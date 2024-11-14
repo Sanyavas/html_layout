@@ -231,11 +231,11 @@ iframe {
   top: 0;
   min-width: 300px;
   height: 100vh; /* Встановлює висоту на всю висоту екрану */
-  background-color: rgba(245, 244, 250, 0.9);
+  background-color: rgba(245, 244, 250, 1);
   display: flex;
   opacity: 1; /* Початково приховує контейнер */
   transform: translateX(-100%);
-  transition: transform 500ms var(--timing-function), opacity 300ms ease;
+  transition: transform 500ms var(--timing-function);
   pointer-events: none;
   // flex-direction: column; /* Додає вертикальне вирівнювання для вмісту */
   // align-items: center;
