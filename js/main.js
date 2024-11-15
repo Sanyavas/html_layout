@@ -109,12 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 
-
+// Логіка для позиціювання body по висоті в залежності від header
 (() => {
     document.addEventListener('DOMContentLoaded', function () {
-        
-        const { height: pageHeaderHeight} = document.querySelector(".main-nav").getBoundingClientRect()
-
-        document.body.style.paddingTop = `${pageHeaderHeight}px`
+        const pageHeader = document.querySelector('.page-header');
+        if (pageHeader) {
+            const { height: pageHeaderHeight } = pageHeader.getBoundingClientRect();
+            document.body.style.paddingTop = `${pageHeaderHeight}px`;
+        }
     });
 })();
