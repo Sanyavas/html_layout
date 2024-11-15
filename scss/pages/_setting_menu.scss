@@ -1,0 +1,209 @@
+/*
+ |============================
+ | Setting menu
+ |============================
+*/
+
+.setting-menu {
+    position: relative;
+  }
+  
+  /* Загальні стилі для всіх кнопок */
+  .btn-common {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    transform: translateY(-50%);
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 998;
+  }
+  
+  .setting-button {
+    display: flex;
+    flex-direction: column; /* Вирівнювання іконки та тексту по вертикалі */
+    align-items: center; /* Центрування іконки та тексту */
+    justify-content: center; /* Центрування елементів по вертикалі */
+    text-align: center; /* Центрування тексту */
+    fill: var(--primary-text-color);
+    transform-origin: center; /* Масштабування від центру */
+  }
+  
+  .button-text {
+    margin-top: 0; /* Відстань між іконкою та текстом */
+    font-size: 11px; /* Розмір шрифту для тексту */
+  }
+  
+  .setting-button:hover,
+  .setting-close-button:hover {
+    fill: var(--accent-color);
+  }
+  
+  .setting-button .icon-cross {
+    display: none;
+  }
+  
+  .setting-button.is-open .icon-cross {
+    display: block;
+  }
+  
+  .setting-button.is-open .icon-menu {
+    display: none;
+  }
+  
+  .setting-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 300px;
+    height: 100vh; /* Висота на всю висоту екрану */
+    background-color: rgba(245, 244, 250, 1);
+    display: block;
+    opacity: 1; /* Початково видно */
+    transform: translateX(-100%); /* Початково за межами екрану */
+    transition: transform 333ms var(--timing-function);
+    // pointer-events: none;
+    // z-index: 1000; /* Додаємо високий z-index */
+  }
+  
+  .setting-container.is-open {
+    transform: translateX(0); /* Переміщаємо контейнер на екран */
+    // pointer-events: auto; /* Дозволяємо взаємодіяти з контейнером */
+  }
+  
+  .theme-toggle-btn {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    // background-color: transparent;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    z-index: 998;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: var(--primary-text-color);
+  }
+  
+  .icon-sun {
+    fill: goldenrod;
+    background-color: transparent;
+  }
+  
+  .icon-moon {
+    fill: var(--dark-bg-color);
+  }
+  
+  .theme-dark-btn .icon-sun {
+    display: none;
+  }
+  
+  .theme-dark-btn.dark .icon-sun {
+    display: block;
+  }
+  
+  .theme-dark-btn.dark .icon-moon {
+    display: none;
+  }
+  
+  // Setting content
+  
+  .setting-content {
+    padding-top: 80px; /* Відступ зверху */
+  }
+
+  
+  // Menu tree
+
+
+  .tree-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tree-menu .menu-item {
+    display: flex;
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.tree-menu .menu-item:hover {
+    // background-color: #e6e6e6;
+    color: var(--accent-color);
+}
+
+.tree-menu .submenu {
+    margin-left: 20px; /* Відступ для вкладеності */
+    display: none; /* Ховаємо підменю за замовчуванням */
+}
+
+.tree-menu .submenu.is-open {
+    display: block; /* Показуємо підменю, коли воно відкрите */
+}
+
+.tree-menu .submenu-toggle {
+    position: relative; /* Додаємо відносне позиціонування для контейнера */
+    padding-right: 30px; /* Місце для стрілки */
+}
+
+.tree-menu .submenu-toggle::after {
+    content: "▶"; /* Стрілка для позначення вкладеного меню */
+    position: absolute;
+    right: 10px; /* Розташовуємо стрілку з правого краю */
+    top: 50%;
+    transform: translateY(-50%); /* Центруємо по вертикалі */
+    transition: transform 0.3s ease;
+}
+
+.tree-menu .submenu-toggle.is-open::after {
+    transform: translateY(-50%) rotate(90deg); /* Повертаємо стрілку, коли меню відкрите */
+}
+
+  
+  
+  // .tree-menu ul {
+  //   list-style: none; /* Прибираємо маркери списку */
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  
+  // .tree-menu .menu-item {
+  //   display: block;
+  //   padding: 10px;
+  //   border: none;
+  //   background: transparent;
+  //   cursor: pointer;
+  //   text-align: left;
+  //   width: 100%;
+  // }
+  
+  // .tree-menu .submenu {
+  //   display: none; /* Спочатку підменю приховане */
+  //   margin-left: 20px;
+  // }
+  
+  // // .tree-menu .submenu .menu-item {
+  // //   background: #e0e0e0; /* Інший фон для підменю */
+    
+  // // }
+  
+  // .tree-menu .menu-item:hover {
+  //   // background: #d0d0d0; /* Зміна кольору при наведенні */
+  //   color: var(--accent-color);
+  // }
+  

@@ -91,19 +91,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', function () {
         const submenuButtons = document.querySelectorAll('.submenu-toggle');
 
-        if (submenuButtons.length) {
-            submenuButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    toggleSubmenu(button);
-                });
+        submenuButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                toggleSubmenu(button);
             });
-        }
+        });
 
         function toggleSubmenu(button) {
             const submenu = button.nextElementSibling;
             if (submenu) {
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                const isOpen = submenu.classList.contains('is-open');
+                submenu.classList.toggle('is-open', !isOpen); // Додаємо/видаляємо клас 'is-open'
+                button.classList.toggle('is-open', !isOpen); // Додаємо/видаляємо клас 'is-open' для кнопки
             }
         }
+    });
+})();
+
+
+
+(() => {
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const { height: pageHeaderHeight} = document.querySelector(".main-nav").getBoundingClientRect()
+
+        document.body.style.paddingTop = `${pageHeaderHeight}px`
     });
 })();
