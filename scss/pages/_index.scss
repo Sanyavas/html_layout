@@ -186,7 +186,7 @@
 
 .team-title {
   /* display: inline-flex; */
-  color: var(--title-text-color);
+  color: #000000;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -336,7 +336,7 @@
   width: 100px;
   height: 100px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .client-icon {

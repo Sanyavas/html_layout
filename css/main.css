@@ -1,27 +1,40 @@
 @charset "UTF-8";
 :root {
+  --bg-color: #ffffff;
+  --header-color: #ffffff;
+  --footur-color: rgba(38, 50, 56, 1);
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
-  --dark-theme-primary-color: rgba(38, 50, 56, 1);
+  --header-color: #ffffff;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --btn-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+  --bg-color: rgba(38, 50, 56, 1);
+  --header-color: rgba(38, 50, 56, 1);
+  --title-text-color: #ffffff;
+  --shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.08),
+    0 3px 1px 0 rgba(255, 255, 255, 0.1);
+  --card-shadow: 0px 2px 1px -1px rgba(255, 255, 255, 0.2),
+    0px 1px 1px 0px rgba(255, 255, 255, 0.14), 0px 1px 3px 0px rgba(255, 255, 255, 0.12);
 }
 
 body {
-  background-color: var(--primary-white-color);
+  background-color: var(--bg-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   line-height: 1.2;
   margin: 0;
-}
-
-body.dark-theme {
-  background-color: var(--dark-theme-primary-color);
 }
 
 body.modal-open {
@@ -178,7 +191,7 @@ iframe {
   top: 0;
   left: 0;
   z-index: 1000; /* Забезпечення накладання поверх інших елементів */
-  background-color: white; /* Фон для читабельності */
+  background-color: var(--header-color); /* Фон для читабельності */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь для візуального відокремлення */
 }
 
@@ -188,7 +201,6 @@ iframe {
   align-items: center;
   padding: 0 1rem;
   min-height: 80px;
-  border-bottom: 1px solid #ececec;
 }
 
 /* Застосувати тільки для .main-nav всередині .menu-container */
@@ -408,7 +420,8 @@ iframe {
 */
 .footer {
   color: var(--primary-white-color);
-  background-color: var(--dark-bg-color);
+  background-color: var(--footur-color);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Тінь для візуального відокремлення */
 }
 
 .footer-container {
@@ -635,6 +648,7 @@ iframe {
 .button-text {
   margin-top: 0; /* Відстань між іконкою та текстом */
   font-size: 11px; /* Розмір шрифту для тексту */
+  color: var(--title-text-color);
 }
 
 .setting-button:hover,
@@ -680,7 +694,7 @@ iframe {
   margin: 0;
   padding: 0;
   border: none;
-  box-shadow: var(--shadow);
+  box-shadow: var(--btn-shadow);
   cursor: pointer;
   z-index: 998;
 }
@@ -948,7 +962,7 @@ iframe {
 
 .team-title {
   /* display: inline-flex; */
-  color: var(--title-text-color);
+  color: #000000;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -1100,7 +1114,7 @@ iframe {
   width: 100px;
   height: 100px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .client-icon {
@@ -1118,10 +1132,6 @@ iframe {
 
 :root {
   --card-set-gap: 30px;
-  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  --btn-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*
@@ -1145,7 +1155,7 @@ iframe {
   border-radius: 4px;
   margin-right: 5px;
   margin-top: 5px;
-  color: var(--title-text-color);
+  color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1177,6 +1187,7 @@ iframe {
 .product-item {
   flex-basis: 100%; /* 100% ширини для екранів до 767px */
   border-radius: 4px;
+  background-color: #fff;
 }
 
 .product-item:hover {
@@ -1279,6 +1290,7 @@ iframe {
   font-size: 18px;
   line-height: 200%;
   letter-spacing: 0.06em;
+  color: #000;
 }
 
 .product-object {
@@ -1305,7 +1317,7 @@ iframe {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   overflow-y: auto;
-  z-index: 999; /* Додаємо трохи менший z-index, ніж у .setting-container */
+  z-index: 1100; /* Додаємо трохи менший z-index, ніж у .setting-container */
 }
 
 .backdrop.is-hidden {

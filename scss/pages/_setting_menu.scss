@@ -36,6 +36,7 @@
 .button-text {
   margin-top: 0; /* Відстань між іконкою та текстом */
   font-size: 11px; /* Розмір шрифту для тексту */
+  color: var(--title-text-color);
 }
 
 .setting-button:hover,
@@ -85,7 +86,7 @@
   padding: 0;
   border: none;
   // background-color: transparent;
-  box-shadow: var(--shadow);
+  box-shadow: var(--btn-shadow);
   cursor: pointer;
   z-index: 998;
 }
