@@ -9,6 +9,7 @@
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
   --header-color: #ffffff;
+  --setting-bg-color:#ffffff;
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
@@ -23,6 +24,7 @@ body.dark-theme {
   --bg-color: rgba(38, 50, 56, 1);
   --header-color: rgba(38, 50, 56, 1);
   --title-text-color: #ffffff;
+  --setting-bg-color:rgba(61, 82, 92, 1);
 
   --shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.08),
     0 3px 1px 0 rgba(255, 255, 255, 0.1);

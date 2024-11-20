@@ -62,7 +62,7 @@
   left: 0;
   min-width: 300px;
   height: 100vh; /* Висота на всю висоту екрану */
-  background-color: rgba(245, 244, 250, 1);
+  background-color: var(--setting-bg-color);
   display: block;
   opacity: 1; /* Початково видно */
   transform: translateX(-100%); /* Початково за межами екрану */
@@ -85,8 +85,10 @@
   margin: 0;
   padding: 0;
   border: none;
-  // background-color: transparent;
-  box-shadow: var(--btn-shadow);
+  border-radius: 12px;
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #5a5a5a,
+               -5px -5px 10px #ffffff;
   cursor: pointer;
   z-index: 998;
 }
@@ -161,11 +163,16 @@
 }
 
 .tree-menu .submenu-toggle::after {
-  content: '▶'; /* Стрілка для позначення вкладеного меню */
+  content: ''; /* Стрілка для позначення вкладеного меню */
   position: absolute;
   right: 10px; /* Розташовуємо стрілку з правого краю */
   top: 50%;
   transform: translateY(-50%); /* Центруємо по вертикалі */
+  width: 20px; /* Ширина SVG */
+  height: 20px; /* Висота SVG */
+  background-image: url('../img/icon-arrow-right.svg'); /* Посилання на SVG */
+  background-repeat: no-repeat;
+  background-size: contain; /* Масштабує SVG до заданих розмірів */
   transition: transform 0.3s ease;
 }
 

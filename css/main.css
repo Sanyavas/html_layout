@@ -10,6 +10,7 @@
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
   --header-color: #ffffff;
+  --setting-bg-color:#ffffff;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
@@ -23,6 +24,7 @@ body.dark-theme {
   --bg-color: rgba(38, 50, 56, 1);
   --header-color: rgba(38, 50, 56, 1);
   --title-text-color: #ffffff;
+  --setting-bg-color:rgba(61, 82, 92, 1);
   --shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.08),
     0 3px 1px 0 rgba(255, 255, 255, 0.1);
   --card-shadow: 0px 2px 1px -1px rgba(255, 255, 255, 0.2),
@@ -674,7 +676,7 @@ iframe {
   left: 0;
   min-width: 300px;
   height: 100vh; /* Висота на всю висоту екрану */
-  background-color: rgb(245, 244, 250);
+  background-color: var(--setting-bg-color);
   display: block;
   opacity: 1; /* Початково видно */
   transform: translateX(-100%); /* Початково за межами екрану */
@@ -694,7 +696,9 @@ iframe {
   margin: 0;
   padding: 0;
   border: none;
-  box-shadow: var(--btn-shadow);
+  border-radius: 12px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
   cursor: pointer;
   z-index: 998;
 }
@@ -764,11 +768,16 @@ iframe {
 }
 
 .tree-menu .submenu-toggle::after {
-  content: "▶"; /* Стрілка для позначення вкладеного меню */
+  content: ""; /* Стрілка для позначення вкладеного меню */
   position: absolute;
   right: 10px; /* Розташовуємо стрілку з правого краю */
   top: 50%;
   transform: translateY(-50%); /* Центруємо по вертикалі */
+  width: 20px; /* Ширина SVG */
+  height: 20px; /* Висота SVG */
+  background-image: url("../img/icon-arrow-right.svg"); /* Посилання на SVG */
+  background-repeat: no-repeat;
+  background-size: contain; /* Масштабує SVG до заданих розмірів */
   transition: transform 0.3s ease;
 }
 
