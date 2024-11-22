@@ -695,10 +695,10 @@ iframe {
   display: inline-flex;
   margin: 0;
   padding: 0;
-  border: none;
-  border-radius: 12px;
-  background: #e0e0e0;
-  box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+  border: 1px solid rgba(129, 129, 129, 0.5);
+  border-radius: 8px;
+  background: #cac8c8;
+  box-shadow: 5px 5px 10px #5a5a5a, -3px -3px 10px #ffffff;
   cursor: pointer;
   z-index: 998;
 }
@@ -778,11 +778,16 @@ iframe {
   background-image: url("../img/icon-arrow-right.svg"); /* Посилання на SVG */
   background-repeat: no-repeat;
   background-size: contain; /* Масштабує SVG до заданих розмірів */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Додаємо плавний перехід */
+}
+
+.tree-menu .submenu-toggle:hover::after {
+  background-image: url("../img/icon-arrow-right-blue.svg"); /* Синя стрілка при ховері */
 }
 
 .tree-menu .submenu-toggle.is-open::after {
   transform: translateY(-50%) rotate(90deg); /* Повертаємо стрілку, коли меню відкрите */
+  background-image: url("../img/icon-arrow-right-blue.svg"); /* Синя стрілка при відкритті */
 }
 
 /*колір основного тексту background: #757575;

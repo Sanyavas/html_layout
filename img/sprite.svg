@@ -158,5 +158,8 @@
 <symbol id="icon-arrow_forward" viewBox="0 0 24 24">
 <path d="M5.859 4.125l2.156-2.109 9.984 9.984-9.984 9.984-2.156-2.109 7.922-7.875z"></path>
 </symbol>
+<symbol id="icon-arrow_forward_blue" viewBox="0 0 24 24">
+<path fill="#2196f3" style="fill: var(--color1, #2196f3)" d="M5.859 4.125l2.156-2.109 9.984 9.984-9.984 9.984-2.156-2.109 7.922-7.875z"></path>
+</symbol>
 </defs>
 </svg>
