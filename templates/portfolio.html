@@ -1,414 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
     <link rel="shortcut icon" href="../img/icon.svg">
     <link rel="stylesheet" href="../css/main.min.css">
-  </head>
-  <body>
-    <!-- Шапка сторінки -->
+</head>
+<body>
+<!-- Шапка сторінки -->
 
-    <header class="page-header">
-      <!-- Меню налаштувань -->
-      <section class="setting-menu">
+<header class="page-header">
+    <!-- Меню налаштувань -->
+    <section class="setting-menu">
         <button
-          type="button"
-          class="setting-button btn-common"
-          aria-expanded="false"
-          aria-controls="setting-container"
-          data-setting-button
+                type="button"
+                class="setting-button btn-common"
+                aria-expanded="false"
+                aria-controls="setting-container"
+                data-setting-button
         >
-          <svg width="40" height="40" aria-label="Перемикач меню налаштувань">
-            <use class="icon-menu" href="../img/sprite.svg#icon-apps"></use>
-          </svg>
-          <span class="button-text">menu</span>
-          <!-- Текст додається тут -->
+            <svg width="40" height="40" aria-label="Перемикач меню налаштувань">
+                <use class="icon-menu" href="../img/sprite.svg#icon-apps"></use>
+            </svg>
+            <span class="button-text">menu</span>
+            <!-- Текст додається тут -->
         </button>
 
         <div class="backdrop is-hidden" data-setting-backdrop>
-          <div class="setting-container" id="setting-container" data-setting>
-            <button
-              type="button"
-              class="setting-close-button btn-common"
-              aria-expanded="true"
-              aria-controls="setting-container"
-              data-setting-button
-            >
-              <svg width="40" height="40" aria-label="Закрити меню налаштувань">
-                <use class="icon-cross" href="../img/sprite.svg#cross"></use>
-              </svg>
-            </button>
-            <div class="theme-dark-btn">
-              <button
-                type="button"
-                id="theme-toggle-btn"
-                class="theme-toggle-btn"
-                aria-expanded="false"
-              >
-                <svg width="40" height="40" aria-label="Перемикач теми">
-                  <use class="icon-moon" href="../img/sprite.svg#icon-moon"></use>
-                  <use class="icon-sun" href="../img/sprite.svg#icon-sun"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="setting-content">
-      
-              <nav class="tree-menu">
-                <ul>
-                  <li>
-                    <button class="menu-item">Головна</button>
-                  </li>
-                  <li>
-                    <button class="menu-item submenu-toggle">Про нас</button>
-                    <ul class="submenu">
-                      <li><button class="menu-item">Наша історія</button></li>
-                      <li><button class="menu-item">Наша команда</button></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <button class="menu-item submenu-toggle">Послуги</button>
-                    <ul class="submenu">
-                      <li><button class="menu-item">Консультації</button></li>
-                      <li>
-                        <button class="menu-item submenu-toggle">Технічна підтримка</button>
-                        <ul class="submenu">
-                          <li><button class="menu-item">Онлайн підтримка</button></li>
-                          <li><button class="menu-item">Сервісне обслуговування</button></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="setting-container" id="setting-container" data-setting>
+                <button
+                        type="button"
+                        class="setting-close-button btn-common"
+                        aria-expanded="true"
+                        aria-controls="setting-container"
+                        data-setting-button
+                >
+                    <svg width="40" height="40" aria-label="Закрити меню налаштувань">
+                        <use class="icon-cross" href="../img/sprite.svg#cross"></use>
+                    </svg>
+                </button>
+                <div class="theme-dark-btn">
+                    <button
+                            type="button"
+                            id="theme-toggle-btn"
+                            class="theme-toggle-btn"
+                            aria-expanded="false"
+                    >
+                        <svg width="40" height="40" aria-label="Перемикач теми">
+                            <use class="icon-moon" href="../img/sprite.svg#icon-moon"></use>
+                            <use class="icon-sun" href="../img/sprite.svg#icon-sun"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="setting-content">
 
-      <!-- Меню навігації -->
-      <div class="container main-nav">
+                    <nav class="tree-menu">
+                        <ul>
+                            <li>
+                                <button class="menu-item">Головна</button>
+                            </li>
+                            <li>
+                                <button class="menu-item submenu-toggle">Про нас</button>
+                                <ul class="submenu">
+                                    <li>
+                                        <button class="menu-item">Наша історія</button>
+                                    </li>
+                                    <li>
+                                        <button class="menu-item">Наша команда</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="menu-item submenu-toggle">Послуги</button>
+                                <ul class="submenu">
+                                    <li>
+                                        <button class="menu-item">Консультації</button>
+                                    </li>
+                                    <li>
+                                        <button class="menu-item submenu-toggle">Технічна підтримка</button>
+                                        <ul class="submenu">
+                                            <li>
+                                                <button class="menu-item">Онлайн підтримка</button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-item">Сервісне обслуговування</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню навігації -->
+    <div class="container main-nav">
         <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span> </a>
         <!-- Кнопка навігації мобільної версії -->
         <button
-          type="button"
-          class="menu-button"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
+                type="button"
+                class="menu-button"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button
         >
-          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-            <use class="icon-cross" href="../img/sprite.svg#cross"></use>
-            <use class="icon-menu" href="../img/sprite.svg#menu"></use>
-          </svg>
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                <use class="icon-cross" href="../img/sprite.svg#cross"></use>
+                <use class="icon-menu" href="../img/sprite.svg#menu"></use>
+            </svg>
         </button>
 
         <nav class="menu-container" id="menu-container" data-menu>
-          <div class="navigation">
-            <ul class="menu-list list">
-              <li class="menu-item">
-                <a href="./index.html" class="menu-link">Home</a>
-              </li>
-              <li class="menu-item">
-                <a href="./portfolio.html" class="menu-link current">Portfolio</a>
-              </li>
-              <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
-              <li class="menu-item"><a href="#" class="menu-link">About</a></li>
-            </ul>
-          </div>
+            <div class="navigation">
+                <ul class="menu-list list">
+                    <li class="menu-item">
+                        <a href="./index.html" class="menu-link">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="./portfolio.html" class="menu-link current">Portfolio</a>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">About</a></li>
+                </ul>
+            </div>
 
-          <div class="contacts">
-            <ul class="contact-nav list">
-              <li class="contact-item nav-icon">
-                <a class="text-grey" href="mailto:vasilinaoleksandr@gmail.com">
-                  <svg class="icon" width="20" height="16">
-                    <use href="../img/sprite.svg#icon-email-transparent"></use>
-                  </svg>
-                  vasilinaoleksandr@gmail.com
-                </a>
-              </li>
-              <li class="contact-item nav-icon">
-                <a class="text-grey" href="tel:+380671234567">
-                  <svg class="icon" width="20" height="16">
-                    <use href="../img/sprite.svg#icon-smartphone"></use>
-                  </svg>
-                  +380671234567
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="contacts">
+                <ul class="contact-nav list">
+                    <li class="contact-item nav-icon">
+                        <a class="text-grey" href="mailto:vasilinaoleksandr@gmail.com">
+                            <svg class="icon" width="20" height="16">
+                                <use href="../img/sprite.svg#icon-email-transparent"></use>
+                            </svg>
+                            vasilinaoleksandr@gmail.com
+                        </a>
+                    </li>
+                    <li class="contact-item nav-icon">
+                        <a class="text-grey" href="tel:+380671234567">
+                            <svg class="icon" width="20" height="16">
+                                <use href="../img/sprite.svg#icon-smartphone"></use>
+                            </svg>
+                            +380671234567
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Унікальний контент сторінки -->
-    <main>
-      <!-- Section portfolio -->
-      <section>
+<!-- Унікальний контент сторінки -->
+<main>
+    <!-- Section portfolio -->
+    <section>
         <div class="container">
-          <h1></h1>
-          <ul class="card-set-btn">
-            <li><button class="card-btn" type="button">Всі</button></li>
-            <li><button class="card-btn" type="button">Веб-сайти</button></li>
-            <li><button class="card-btn" type="button">Додатки</button></li>
-            <li><button class="card-btn" type="button">Дизайн</button></li>
-            <li><button class="card-btn" type="button">Маркетинг</button></li>
-          </ul>
+            <h1></h1>
+            <ul class="card-set-btn">
+                <li>
+                    <button class="card-btn" type="button">Всі</button>
+                </li>
+                <li>
+                    <button class="card-btn" type="button">Веб-сайти</button>
+                </li>
+                <li>
+                    <button class="card-btn" type="button">Додатки</button>
+                </li>
+                <li>
+                    <button class="card-btn" type="button">Дизайн</button>
+                </li>
+                <li>
+                    <button class="card-btn" type="button">Маркетинг</button>
+                </li>
+            </ul>
 
-          <ul class="product-list list">
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img
-                      class="product-img"
-                      src="../img/recruitingAI.jpg"
-                      alt="Recruiting AI Image"
-                    />
-                    <div class="product-action">
-                      <p class="product-description">
-                        Автоматизований рекрутер з використанням ШІ, який аналізує та оцінює резюме
-                        кандидатів, виділяючи найбільш підходящих. Додаток також автоматично планує
-                        зустрічі для найперспективніших кандидатів, оптимізуючи процес відбору.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Recruiting AI</h2>
-                    <p class="product-object">Додаток</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_lab.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">Тут тестовий опис проекту</p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Проєкт LAB</h2>
-                    <p class="product-object">Маркетинг</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_bsn.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">Тут тестовий опис проекту</p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Growing Business</h2>
-                    <p class="product-object">Додаток</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_web.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">
-                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
-                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
-                        компанію чи приватну особу.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Inspiration has no Borders</h2>
-                    <p class="product-object">Веб-сайт</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_bsn.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">Тут тестовий опис проекту</p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Growing Business</h2>
-                    <p class="product-object">Додаток</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_web.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">Тут тестовий опис проекту</p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Inspiration has no Borders</h2>
-                    <p class="product-object">Веб-сайт</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img-project.jpg" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">
-                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
-                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
-                        компанію чи приватну особу.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Inspiration has no Borders</h2>
-                    <p class="product-object">Веб-сайт</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_lab.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">
-                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
-                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
-                        компанію чи приватну особу.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Проєкт LAB</h2>
-                    <p class="product-object">Маркетинг</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-            <li class="product-item">
-              <a href="#">
-                <article class="product-card">
-                  <div class="product-thumb">
-                    <img class="product-img" src="../img/img_bsn.png" alt="" />
-                    <div class="product-action">
-                      <p class="product-description">
-                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
-                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
-                        компанію чи приватну особу.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-content">
-                    <h2 class="product-title">Growing Business</h2>
-                    <p class="product-object">Додаток</p>
-                  </div>
-                </article>
-              </a>
-            </li>
-          </ul>
+            <ul class="product-list list">
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img
+                                        class="product-img"
+                                        src="../img/recruitingAI.jpg"
+                                        alt="Recruiting AI Image"
+                                />
+                                <div class="product-action">
+                                    <p class="product-description">
+                                        Автоматизований рекрутер з використанням ШІ, який аналізує та оцінює резюме
+                                        кандидатів, виділяючи найбільш підходящих. Додаток також автоматично планує
+                                        зустрічі для найперспективніших кандидатів, оптимізуючи процес відбору.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Recruiting AI</h2>
+                                <p class="product-object">Додаток</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_lab.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">Тут тестовий опис проекту</p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Проєкт LAB</h2>
+                                <p class="product-object">Маркетинг</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_bsn.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">Тут тестовий опис проекту</p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Growing Business</h2>
+                                <p class="product-object">Додаток</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_web.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">
+                                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+                                        компанію чи приватну особу.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Inspiration has no Borders</h2>
+                                <p class="product-object">Веб-сайт</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_bsn.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">Тут тестовий опис проекту</p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Growing Business</h2>
+                                <p class="product-object">Додаток</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_web.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">Тут тестовий опис проекту</p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Inspiration has no Borders</h2>
+                                <p class="product-object">Веб-сайт</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img-project.jpg" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">
+                                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+                                        компанію чи приватну особу.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Inspiration has no Borders</h2>
+                                <p class="product-object">Веб-сайт</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_lab.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">
+                                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+                                        компанію чи приватну особу.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Проєкт LAB</h2>
+                                <p class="product-object">Маркетинг</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="product-item">
+                    <a href="#">
+                        <article class="product-card">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../img/img_bsn.png" alt=""/>
+                                <div class="product-action">
+                                    <p class="product-description">
+                                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                                        сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+                                        компанію чи приватну особу.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="product-title">Growing Business</h2>
+                                <p class="product-object">Додаток</p>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </section>
-    </main>
-    <!-- Підвал сторінки -->
-    <footer class="footer">
-      <div class="container footer-container">
+    </section>
+</main>
+<!-- Підвал сторінки -->
+<footer class="footer">
+    <div class="container footer-container">
         <div class="footer-logo">
-          <a class="logo" href="./index.html">Web<span class="logo-white">Studio</span> </a>
-          <ul class="footer-contact list">
-            <li>
-              <a
-                class="footer-address"
-                href="https://www.google.com/maps/search/?api=1&query=м.+Київ,+пр-т+Лесі+Українки,+26"
-                target="_blank"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li>
-              <a class="text-grey" href="mailto:vasilinaoleksandr@gmail.com"
-                >vasilinaoleksandr@gmail.com</a
-              >
-            </li>
-            <li>
-              <a class="text-grey" href="tel:+380671234567">+380671234567</a>
-            </li>
-          </ul>
+            <a class="logo" href="./index.html">Web<span class="logo-white">Studio</span> </a>
+            <ul class="footer-contact list">
+                <li>
+                    <a
+                            class="footer-address"
+                            href="https://www.google.com/maps/search/?api=1&query=м.+Київ,+пр-т+Лесі+Українки,+26"
+                            target="_blank">
+                        м. Київ, пр-т Лесі Українки, 26</a>
+                </li>
+                <li>
+                    <a class="text-grey" href="mailto:vasilinaoleksandr@gmail.com">
+                        vasilinaoleksandr@gmail.com</a>
+                </li>
+                <li>
+                    <a class="text-grey" href="tel:+380671234567">+380671234567</a>
+                </li>
+            </ul>
         </div>
 
         <div class="footer-social">
-          <h2 class="footer-social-title">Приєднуйся</h2>
-          <ul class="footer-social-list list">
-            <li class="footer-social-background">
-              <a href="#"
-                ><svg class="icon">
-                  <use href="../img/sprite.svg#icon-instagram"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social-background">
-              <a href="#"
-                ><svg class="icon">
-                  <use href="../img/sprite.svg#icon-Twiter"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social-background">
-              <a href="#"
-                ><svg class="icon">
-                  <use href="../img/sprite.svg#icon-facebook"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social-background">
-              <a href="#"
-                ><svg class="icon">
-                  <use href="../img/sprite.svg#icon-linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
+            <h2 class="footer-social-title">Приєднуйся</h2>
+            <ul class="footer-social-list list">
+                <li class="footer-social-background">
+                    <a href="#">
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer-social-background">
+                    <a href="#"
+                    >
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#icon-Twiter"></use>
+                        </svg
+                        >
+                    </a>
+                </li>
+                <li class="footer-social-background">
+                    <a href="#"
+                    >
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#icon-facebook"></use>
+                        </svg
+                        >
+                    </a>
+                </li>
+                <li class="footer-social-background">
+                    <a href="#"
+                    >
+                        <svg class="icon">
+                            <use href="../img/sprite.svg#icon-linkedin"></use>
+                        </svg
+                        >
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="footer-subscribe-form">
-          <h2 class="subscribe-form-title">Підпишіться на розсилку</h2>
-          <form>
-            <input type="email" class="subscribe-form-input" placeholder="   E-mail" />
-
-            <div class="btn-icon">
-              <button class="subscribe-form-btn button primary" type="submit">
-                Підписатися
-                <svg class="icon-subscribe" width="25" height="25">
-                  <use href="../img/sprite.svg#icon-telegram"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
+            <h2 class="subscribe-form-title">Підпишіться на розсилку</h2>
+            <form>
+                <!-- Додано label -->
+                <label for="email-input" class="visually-hidden">Введіть вашу електронну адресу</label>
+                <input
+                        type="email"
+                        id="email-input"
+                        class="subscribe-form-input"
+                        placeholder="E-mail"
+                        required
+                />
+                <div class="btn-icon">
+                    <button class="subscribe-form-btn button primary" type="submit">
+                        Підписатися
+                        <svg class="icon-subscribe" width="25" height="25">
+                            <use href="../img/sprite.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
-      </div>
-      <p class="footer-end">Всі права захищені Sanyavas &copy; 2024</p>
-    </footer>
+    </div>
+    <p class="footer-end">Всі права захищені Sanyavas &copy; 2024</p>
+</footer>
 
-    <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 
-  </body>
+</body>
 </html>
